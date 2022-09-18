@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "626db03d26a782d72b0beb17"
+  },
+  "name": "Childish",
+  "minAge": 0,
+  "maxAge": 12,
+  "pointsGiven": 1
+},{
+  "_id": {
+    "$oid": "626e8f7ef1303087082639dd"
+  },
+  "name": "Juvenile",
+  "minAge": 13,
+  "maxAge": 17,
+  "pointsGiven": 2
+},{
+  "_id": {
+    "$oid": "6272dafee2874b502c406972"
+  },
+  "name": "Adult",
+  "minAge": 18,
+  "maxAge": 64,
+  "pointsGiven": 3
+},{
+  "_id": {
+    "$oid": "6272db18e2874b502c406f63"
+  },
+  "name": "Senior",
+  "minAge": 65,
+  "maxAge": 120,
+  "pointsGiven": 4
+}]

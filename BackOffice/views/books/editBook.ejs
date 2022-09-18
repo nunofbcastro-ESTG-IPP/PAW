@@ -1,0 +1,127 @@
+<div class="p-4 flex items-center justify-center h-full">
+  <div class="p-4 w-2/4 bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 lg:p-8">
+    <form id="form" class="space-y-6" action="/book/editBook/<%= book._id %>" method="post" enctype="multipart/form-data">
+      <h5 class="text-xl font-medium text-gray-900">Edit book</h5>
+      <div class="grid xl:grid-cols-2 xl:gap-6">
+        <div>
+          <label for="isbn" class="block mb-2 text-sm font-medium text-gray-900">ISBN</label>
+          <input readonly type="text" name="isbn" id="isbn" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="9788845292613" value="<%= book.isbn %>" />
+          <p id="isbnBookError" class="hidden mt-2 text-sm text-red-600">
+            Please provide a valid isbn.
+          </p>
+        </div>
+        <div>
+          <label for="title" class="block mb-2 text-sm font-medium text-gray-900">Book's title</label>
+          <input value="<%= book.title %>" type="text" name="title" id="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Senhor dos aneis"  />
+          <p id="titleError" class="hidden mt-2 text-sm text-red-600">Please provide a valid name.</p>
+        </div>
+        <div>
+          <label for="author" class="block mb-2 text-sm font-medium text-gray-900">Author</label>
+          <input value="<%= book.author %>" type="text" name="author" id="author" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="J. R. R. Tolkien" />
+          <p id="authorError" class="hidden mt-2 text-sm text-red-600">Please provide a valid author.</p>
+        </div>
+        <div>
+          <label for="publishers" class="block mb-2 text-sm font-medium text-gray-900">Publishers</label>
+          <input value="<%= book.publishers %>" type="text" name="publishers" id="publishers" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Bompiani" />
+          <p id="publishersError" class="hidden mt-2 text-sm text-red-600">Please provide a valid publisher.</p>
+        </div>
+        <div>
+          <label for="numberPages" class="block mb-2 text-sm font-medium text-gray-900">Number of pages</label>
+          <input value="<%= book.number_of_pages %>" type="number" name="numberPages" id="numberPages" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="300"/>
+          <p id="numberPagesError" class="hidden mt-2 text-sm text-red-600">Please provide a valid number pages.</p>
+        </div>
+        <div>
+          <label for="language" class="block mb-2 text-sm font-medium text-gray-900">Language</label>
+          <select
+            name="language"
+            id="language"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          >
+          <option value="" disabled selected>Select your option</option>
+          <% for(var i=0; i<languages.length;i++) { %>
+            <option value="<%= languages[i].code%>"><%= languages[i].name%></option>
+          <% } %>
+          </select>
+          <p id="languageError" class="hidden mt-2 text-sm text-red-600">Please provide a valid language.</p>
+        </div>
+        <div>
+          <label for="priceNew" step = "0.01" class="block mb-2 text-sm font-medium text-gray-900">Price new book</label>
+          <input value="<%= book.price[0].price %>" type="number" name="priceNew" id="priceNew" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="15€" />
+          <p id="priceNewError" class="hidden mt-2 text-sm text-red-600">Please provide a valid price new.</p>
+        </div>
+        <div>
+          <label for="priceOld" step = "0.01" class="block mb-2 text-sm font-medium text-gray-900">Price old book</label>
+          <input value="<%= book.price[1].price %>" type="number" name="priceOld" id="priceOld" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="10€" />
+          <p id="priceOldError" class="hidden mt-2 text-sm text-red-600">Please provide a valid price old.</p>
+        </div>
+        <div>
+          <label for="stockNew" class="block mb-2 text-sm font-medium text-gray-900">Stock new books</label>
+          <input value="<%= book.price[0].stock %>" type="number" name="stockNew" id="stockNew" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="5" />
+          <p id="stockNewError" class="hidden mt-2 text-sm text-red-600">Please provide a valid stock new.</p>
+        </div>
+        <div>
+          <label for="stockOld" class="block mb-2 text-sm font-medium text-gray-900">Stock old books</label>
+          <input value="<%= book.price[1].stock %>" type="number" name="stockOld" id="stockOld" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="2" />
+          <p id="stockOldError" class="hidden mt-2 text-sm text-red-600">Please provide a valid stock old.</p>
+        </div>
+        <div>
+          <label for="publishDate" class="block mb-2 text-sm font-medium text-gray-900">Publish Date</label>
+          <div class="relative">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+              <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <input
+              datepicker-autohide
+              datepicker
+              datepicker-format="mm/dd/yyyy"
+              type="text"
+              id="publishDate"
+              name="publishDate"
+              value="<%= book.publishDate %>"
+              class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
+              placeholder="Select date"
+            />
+            <p id="publishDateError" class="hidden mt-2 text-sm text-red-600">Please provide a valid publish date.</p>
+          </div>
+        </div>
+        <div>
+          <label for="coverBookInput" class="block mb-2 text-sm font-medium text-gray-900">Book cover</label>
+          <div class="flex items-center space-x-2 shrink-0">
+            <input id="coverBookInput" name="coverBookInput" type="file" accept="image/*" class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none focus:border-transparent" />
+            <img src="/images/books/<%= book.image %>" id="coverBookImage" class="shrink-0 h-20" alt=""  />
+          </div>
+        </div>
+      </div>
+      <div>
+        <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Description/Synopsis</label>
+        <textarea id="description" name="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Leave a description/synopsis..." ><%= book.descrition %></textarea>
+        <p id="descriptionError" class="hidden mt-2 text-sm text-red-600">Please provide a valid description.</p>
+      </div>
+      <button id="editBook" type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Edit</button>
+    </form>
+  </div>
+</div>
+
+<% if(typeof error != 'undefined') { %>
+  <div class="absolute top-5 right-5 flex justify-end space-y-2">
+    <div id="toast-danger" class="flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
+      <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-red-500 bg-red-100 rounded-lg dark:bg-red-800 dark:text-red-200">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      </div>
+      <div class="ml-3 text-sm font-normal"><%= error %></div>
+      <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-danger" aria-label="Close">
+          <span class="sr-only">Close</span>
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      </button>
+    </div>
+  </div>
+  <% } %>
+
+<script src="/javascripts/bookValidations.js"></script>
+<script>
+  selectLanguage("<%= book.lang %>")
+</script>
+<script src="/flowbite/dist/datepicker.js"></script>
+ 

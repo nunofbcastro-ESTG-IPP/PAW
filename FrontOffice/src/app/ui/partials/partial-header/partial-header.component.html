@@ -1,0 +1,171 @@
+<nav
+  class="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg bg-gray-800"
+>
+  <div
+    class="m-3 container flex flex-wrap justify-between items-center mx-auto"
+  >
+    <div class="flex">
+      <a class="flex" routerLink="/">
+        <img src="/favicon.ico" class="mr-3 h-6 sm:h-9" alt="Logo" />
+        <span
+          class="self-center text-xl font-semibold whitespace-nowrap text-white"
+          >BookMarket</span
+        >
+      </a>
+    </div>
+
+    <div class="hidden w-full md:flex md:items-center md:w-auto">
+      <ul
+        class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0"
+      >
+        <li class="pr-4">
+          <a
+            routerLink="/"
+            class="itemNavBar"
+            routerLinkActive="itemNavBarActive"
+            [routerLinkActiveOptions]="{ exact: true }"
+            aria-current="page"
+          >
+            <i class="pi pi-home" style="font-size: 1rem"></i>
+            <span class="ml-1">Home</span>
+          </a>
+        </li>
+        <li class="pr-4">
+          <a
+            routerLink="/book/bookList"
+            class="itemNavBar"
+            routerLinkActive="itemNavBarActive"
+            [routerLinkActiveOptions]="{ exact: true }"
+            aria-current="page"
+          >
+            <i class="pi pi-book" style="font-size: 1rem"></i>
+            <span class="ml-1">Books</span>
+          </a>
+        </li>
+        <li class="pr-2">
+          <a
+            routerLink="/book/bookSelling"
+            class="itemNavBar"
+            routerLinkActive="itemNavBarActive"
+            [routerLinkActiveOptions]="{ exact: true }"
+            aria-current="page"
+            *ngIf="user"
+          >
+            <i class="pi pi-money-bill" style="font-size: 1rem"></i>
+            <span class="ml-1">Book Selling</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="flex h-full justify-center items-center">
+      <a routerLink="/auth/login" class="button mr-2" *ngIf="!user">Login</a>
+      <a routerLink="/auth/register" class="button mr-2" *ngIf="!user"
+        >Register</a
+      >
+
+      <div class="dropdown dropdown-end">
+        <label tabindex="0" class="btn btn-ghost btn-circle">
+          <div class="indicator">
+            <svg
+              class="flex-shrink-0 h-6 w-6 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+              />
+            </svg>
+            <span class="text-white bg-red-700 badge badge-sm indicator-item">{{
+              numberItens
+            }}</span>
+          </div>
+        </label>
+        <div
+          tabindex="0"
+          class="rounded-xl dropdown-content bg-base-100 shadow w-72 sm:w-80"
+        >
+          <app-partial-cart></app-partial-cart>
+        </div>
+      </div>
+
+      <div class="dropdown dropdown-end" *ngIf="user">
+        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+          <div class="w-10 rounded-full">
+            <custom-img
+              [src]="imageSrc + user.profileImage"
+              [imageNotFound]="imageNotFoundUser"
+              [class]="'mb-3 w-32 h-32 rounded-full shadow-lg'"
+            ></custom-img>
+          </div>
+        </label>
+        <ul
+          tabindex="0"
+          class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+        >
+          <li><button routerLink="/user/dashboard">Dashboard</button></li>
+          <li><a (click)="logout()">Logout</a></li>
+        </ul>
+      </div>
+
+      <svg
+        class="h-6 w-6 cursor-pointer md:hidden block text-gray-400"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+        (click)="menuMobile()"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+    </div>
+
+    <div class="hidden md:hidden w-full items-center" #menu>
+      <ul
+        class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0"
+      >
+        <li class="pr-2">
+          <a
+            routerLink="/"
+            class="itemNavBar"
+            routerLinkActive="itemNavBarActive"
+            [routerLinkActiveOptions]="{ exact: true }"
+            aria-current="page"
+            >Home</a
+          >
+        </li>
+        <li class="pr-2">
+          <a
+            routerLink="/book/bookList"
+            class="itemNavBar"
+            routerLinkActive="itemNavBarActive"
+            [routerLinkActiveOptions]="{ exact: true }"
+            aria-current="page"
+            >List books</a
+          >
+        </li>
+        <li class="pr-2">
+          <a
+            routerLink="/book/bookSelling"
+            class="itemNavBar"
+            routerLinkActive="itemNavBarActive"
+            [routerLinkActiveOptions]="{ exact: true }"
+            aria-current="page"
+            *ngIf="user"
+          >
+            Book Selling
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,1306 @@
+[{
+  "_id": {
+    "$oid": "6266d3623a3631097a05238d"
+  },
+  "code": "ab",
+  "name": "Abkhazian",
+  "native": "Аҧсуа"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05238f"
+  },
+  "code": "ak",
+  "name": "Akan",
+  "native": "Akana"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05238c"
+  },
+  "code": "aa",
+  "name": "Afar",
+  "native": "Afar"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05238e"
+  },
+  "code": "af",
+  "name": "Afrikaans",
+  "native": "Afrikaans"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052391"
+  },
+  "code": "an",
+  "name": "Aragonese",
+  "native": "Aragonés"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052395"
+  },
+  "code": "ay",
+  "name": "Aymara",
+  "native": "Aymar"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052397"
+  },
+  "code": "ba",
+  "name": "Bashkir",
+  "native": "Башҡорт"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05239a"
+  },
+  "code": "bh",
+  "name": "Bihari",
+  "native": "भोजपुरी"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05239b"
+  },
+  "code": "bi",
+  "name": "Bislama",
+  "native": "Bislama"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05239c"
+  },
+  "code": "bm",
+  "name": "Bambara",
+  "native": "Bamanankan"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05239e"
+  },
+  "code": "bo",
+  "name": "Tibetan",
+  "native": "བོད་ཡིག / Bod skad"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523a0"
+  },
+  "code": "bs",
+  "name": "Bosnian",
+  "native": "Bosanski"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523a1"
+  },
+  "code": "ca",
+  "name": "Catalan",
+  "native": "Català"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523a3"
+  },
+  "code": "ch",
+  "name": "Chamorro",
+  "native": "Chamoru"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523aa"
+  },
+  "code": "da",
+  "name": "Danish",
+  "native": "Dansk"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523ab"
+  },
+  "code": "de",
+  "name": "German",
+  "native": "Deutsch"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523b0"
+  },
+  "code": "en",
+  "name": "English",
+  "native": "English"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523b3"
+  },
+  "code": "et",
+  "name": "Estonian",
+  "native": "Eesti"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523b5"
+  },
+  "code": "fa",
+  "name": "Persian",
+  "native": "فارسی",
+  "rtl": 1
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523b7"
+  },
+  "code": "fi",
+  "name": "Finnish",
+  "native": "Suomi"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523bf"
+  },
+  "code": "gn",
+  "name": "Guarani",
+  "native": "Avañe'ẽ"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523c0"
+  },
+  "code": "gu",
+  "name": "Gujarati",
+  "native": "ગુજરાતી"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523c2"
+  },
+  "code": "ha",
+  "name": "Hausa",
+  "native": "هَوُسَ",
+  "rtl": 1
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523cb"
+  },
+  "code": "ia",
+  "name": "Interlingua",
+  "native": "Interlingua"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523ce"
+  },
+  "code": "ig",
+  "name": "Igbo",
+  "native": "Igbo"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523cf"
+  },
+  "code": "ii",
+  "name": "Sichuan Yi",
+  "native": "ꆇꉙ / 四川彝语"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523da"
+  },
+  "code": "kj",
+  "name": "Kuanyama",
+  "native": "Kuanyama"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523de"
+  },
+  "code": "kn",
+  "name": "Kannada",
+  "native": "ಕನ್ನಡ"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523e3"
+  },
+  "code": "kv",
+  "name": "Komi",
+  "native": "Коми"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523e4"
+  },
+  "code": "kw",
+  "name": "Cornish",
+  "native": "Kernewek"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523e9"
+  },
+  "code": "li",
+  "name": "Limburgian",
+  "native": "Limburgs"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523eb"
+  },
+  "code": "lo",
+  "name": "Laotian",
+  "native": "ລາວ / Pha xa lao"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523ec"
+  },
+  "code": "lt",
+  "name": "Lithuanian",
+  "native": "Lietuvių"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523ed"
+  },
+  "code": "lu",
+  "name": "Luba-Katanga",
+  "native": "Tshiluba"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523ef"
+  },
+  "code": "mg",
+  "name": "Malagasy",
+  "native": "Malagasy"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523f3"
+  },
+  "code": "ml",
+  "name": "Malayalam",
+  "native": "മലയാളം"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523f5"
+  },
+  "code": "mo",
+  "name": "Moldovan",
+  "native": "Moldovenească"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052403"
+  },
+  "code": "nv",
+  "name": "Navajo",
+  "native": "Diné bizaad"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052404"
+  },
+  "code": "ny",
+  "name": "Chichewa",
+  "native": "Chi-Chewa"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052406"
+  },
+  "code": "oj",
+  "name": "Ojibwa",
+  "native": "ᐊᓂᔑᓈᐯᒧᐎᓐ / Anishinaabemowin"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052409"
+  },
+  "code": "os",
+  "name": "Ossetian / Ossetic",
+  "native": "Иронау"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05240e"
+  },
+  "code": "pt",
+  "name": "Portuguese",
+  "native": "Português"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052415"
+  },
+  "code": "sa",
+  "name": "Sanskrit",
+  "native": "संस्कृतम्"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052416"
+  },
+  "code": "sc",
+  "name": "Sardinian",
+  "native": "Sardu"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052417"
+  },
+  "code": "sd",
+  "name": "Sindhi",
+  "native": "सिनधि"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05241a"
+  },
+  "code": "sh",
+  "name": "Serbo-Croatian",
+  "native": "Srpskohrvatski / Српскохрватски"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052420"
+  },
+  "code": "so",
+  "name": "Somalia",
+  "native": "Soomaaliga"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05243e"
+  },
+  "code": "wo",
+  "name": "Wolof",
+  "native": "Wollof"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052440"
+  },
+  "code": "yi",
+  "name": "Yiddish",
+  "native": "ייִדיש",
+  "rtl": 1
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052442"
+  },
+  "code": "za",
+  "name": "Zhuang",
+  "native": "Cuengh / Tôô / 壮语"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052392"
+  },
+  "code": "ar",
+  "name": "Arabic",
+  "native": "العربية",
+  "rtl": 1
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052393"
+  },
+  "code": "as",
+  "name": "Assamese",
+  "native": "অসমীয়া"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052394"
+  },
+  "code": "av",
+  "name": "Avar",
+  "native": "Авар"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523a2"
+  },
+  "code": "ce",
+  "name": "Chechen",
+  "native": "Нохчийн"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523a4"
+  },
+  "code": "co",
+  "name": "Corsican",
+  "native": "Corsu"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523ad"
+  },
+  "code": "dz",
+  "name": "Dzongkha",
+  "native": "ཇོང་ཁ"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523ae"
+  },
+  "code": "ee",
+  "name": "Ewe",
+  "native": "Ɛʋɛ"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523af"
+  },
+  "code": "el",
+  "name": "Greek",
+  "native": "Ελληνικά"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523b2"
+  },
+  "code": "es",
+  "name": "Spanish",
+  "native": "Español"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523bc"
+  },
+  "code": "ga",
+  "name": "Irish",
+  "native": "Gaeilge"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523be"
+  },
+  "code": "gl",
+  "name": "Galician",
+  "native": "Galego"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523c5"
+  },
+  "code": "ho",
+  "name": "Hiri Motu",
+  "native": "Hiri Motu"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523c6"
+  },
+  "code": "hr",
+  "name": "Croatian",
+  "native": "Hrvatski"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523d3"
+  },
+  "code": "it",
+  "name": "Italian",
+  "native": "Italiano"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523d9"
+  },
+  "code": "ki",
+  "name": "Kikuyu",
+  "native": "Gĩkũyũ"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523dc"
+  },
+  "code": "kl",
+  "name": "Greenlandic",
+  "native": "Kalaallisut"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523df"
+  },
+  "code": "ko",
+  "name": "Korean",
+  "native": "한국어"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523e0"
+  },
+  "code": "kr",
+  "name": "Kanuri",
+  "native": "Kanuri"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523e8"
+  },
+  "code": "lg",
+  "name": "Ganda",
+  "native": "Luganda"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523ea"
+  },
+  "code": "ln",
+  "name": "Lingala",
+  "native": "Lingála"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523f1"
+  },
+  "code": "mi",
+  "name": "Maori",
+  "native": "Māori"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523f7"
+  },
+  "code": "ms",
+  "name": "Malay",
+  "native": "Bahasa Melayu"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523f8"
+  },
+  "code": "mt",
+  "name": "Maltese",
+  "native": "bil-Malti"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523fa"
+  },
+  "code": "na",
+  "name": "Nauruan",
+  "native": "Dorerin Naoero"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523fb"
+  },
+  "code": "nb",
+  "name": "Norwegian Bokmål",
+  "native": "Norsk bokmål"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523fc"
+  },
+  "code": "nd",
+  "name": "North Ndebele",
+  "native": "Sindebele"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523fd"
+  },
+  "code": "ne",
+  "name": "Nepali",
+  "native": "नेपाली"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523fe"
+  },
+  "code": "ng",
+  "name": "Ndonga",
+  "native": "Oshiwambo"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052401"
+  },
+  "code": "no",
+  "name": "Norwegian",
+  "native": "Norsk"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05240b"
+  },
+  "code": "pi",
+  "name": "Pali",
+  "native": "Pāli / पाऴि"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05240f"
+  },
+  "code": "qu",
+  "name": "Quechua",
+  "native": "Runa Simi"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05241e"
+  },
+  "code": "sm",
+  "name": "Samoan",
+  "native": "Gagana Samoa"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052421"
+  },
+  "code": "sq",
+  "name": "Albanian",
+  "native": "Shqip"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052424"
+  },
+  "code": "st",
+  "name": "Southern Sotho",
+  "native": "Sesotho"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052427"
+  },
+  "code": "sw",
+  "name": "Swahili",
+  "native": "Kiswahili"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052429"
+  },
+  "code": "te",
+  "name": "Telugu",
+  "native": "తెలుగు"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052436"
+  },
+  "code": "ug",
+  "name": "Uyghur",
+  "native": "Uyƣurqə / ئۇيغۇرچە"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052439"
+  },
+  "code": "uz",
+  "name": "Uzbek",
+  "native": "Ўзбек"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05243d"
+  },
+  "code": "wa",
+  "name": "Walloon",
+  "native": "Walon"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05243f"
+  },
+  "code": "xh",
+  "name": "Xhosa",
+  "native": "isiXhosa"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052441"
+  },
+  "code": "yo",
+  "name": "Yoruba",
+  "native": "Yorùbá"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052390"
+  },
+  "code": "am",
+  "name": "Amharic",
+  "native": "አማርኛ"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052396"
+  },
+  "code": "az",
+  "name": "Azerbaijani",
+  "native": "Azərbaycanca / آذربايجان"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052398"
+  },
+  "code": "be",
+  "name": "Belarusian",
+  "native": "Беларуская"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052399"
+  },
+  "code": "bg",
+  "name": "Bulgarian",
+  "native": "Български"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05239d"
+  },
+  "code": "bn",
+  "name": "Bengali",
+  "native": "বাংলা"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523a5"
+  },
+  "code": "cr",
+  "name": "Cree",
+  "native": "Nehiyaw"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523a7"
+  },
+  "code": "cu",
+  "name": "Old Church Slavonic / Old Bulgarian",
+  "native": "словѣньскъ / slověnĭskŭ"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523a8"
+  },
+  "code": "cv",
+  "name": "Chuvash",
+  "native": "Чăваш"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523b1"
+  },
+  "code": "eo",
+  "name": "Esperanto",
+  "native": "Esperanto"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523b4"
+  },
+  "code": "eu",
+  "name": "Basque",
+  "native": "Euskara"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523ba"
+  },
+  "code": "fr",
+  "name": "French",
+  "native": "Français"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523bd"
+  },
+  "code": "gd",
+  "name": "Scottish Gaelic",
+  "native": "Gàidhlig"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523c4"
+  },
+  "code": "hi",
+  "name": "Hindi",
+  "native": "हिन्दी"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523c7"
+  },
+  "code": "ht",
+  "name": "Haitian",
+  "native": "Krèyol ayisyen"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523c8"
+  },
+  "code": "hu",
+  "name": "Hungarian",
+  "native": "Magyar"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523cc"
+  },
+  "code": "id",
+  "name": "Indonesian",
+  "native": "Bahasa Indonesia"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523d2"
+  },
+  "code": "is",
+  "name": "Icelandic",
+  "native": "Íslenska"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523d5"
+  },
+  "code": "ja",
+  "name": "Japanese",
+  "native": "日本語"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523d6"
+  },
+  "code": "jv",
+  "name": "Javanese",
+  "native": "Basa Jawa"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523d8"
+  },
+  "code": "kg",
+  "name": "Kongo",
+  "native": "KiKongo"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523dd"
+  },
+  "code": "km",
+  "name": "Cambodian",
+  "native": "ភាសាខ្មែរ"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523e1"
+  },
+  "code": "ks",
+  "name": "Kashmiri",
+  "native": "कश्मीरी / كشميري",
+  "rtl": 1
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523e2"
+  },
+  "code": "ku",
+  "name": "Kurdish",
+  "native": "Kurdî / كوردی",
+  "rtl": 1
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523e7"
+  },
+  "code": "lb",
+  "name": "Luxembourgish",
+  "native": "Lëtzebuergesch"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523f0"
+  },
+  "code": "mh",
+  "name": "Marshallese",
+  "native": "Kajin Majel / Ebon"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523f2"
+  },
+  "code": "mk",
+  "name": "Macedonian",
+  "native": "Македонски"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523f4"
+  },
+  "code": "mn",
+  "name": "Mongolian",
+  "native": "Монгол"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523f6"
+  },
+  "code": "mr",
+  "name": "Marathi",
+  "native": "मराठी"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523f9"
+  },
+  "code": "my",
+  "name": "Burmese",
+  "native": "မြန်မာစာ"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523ff"
+  },
+  "code": "nl",
+  "name": "Dutch",
+  "native": "Nederlands"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052402"
+  },
+  "code": "nr",
+  "name": "South Ndebele",
+  "native": "isiNdebele"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052405"
+  },
+  "code": "oc",
+  "name": "Occitan",
+  "native": "Occitan"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052408"
+  },
+  "code": "or",
+  "name": "Oriya",
+  "native": "ଓଡ଼ିଆ"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05240a"
+  },
+  "code": "pa",
+  "name": "Panjabi / Punjabi",
+  "native": "ਪੰਜਾਬੀ / पंजाबी / پنجابي"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05240c"
+  },
+  "code": "pl",
+  "name": "Polish",
+  "native": "Polski"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052410"
+  },
+  "code": "rm",
+  "name": "Raeto Romance",
+  "native": "Rumantsch"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052412"
+  },
+  "code": "ro",
+  "name": "Romanian",
+  "native": "Română"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052413"
+  },
+  "code": "ru",
+  "name": "Russian",
+  "native": "Русский"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052414"
+  },
+  "code": "rw",
+  "name": "Rwandi",
+  "native": "Kinyarwandi"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05241b"
+  },
+  "code": "si",
+  "name": "Sinhalese",
+  "native": "සිංහල"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05241c"
+  },
+  "code": "sk",
+  "name": "Slovak",
+  "native": "Slovenčina"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05241d"
+  },
+  "code": "sl",
+  "name": "Slovenian",
+  "native": "Slovenščina"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05241f"
+  },
+  "code": "sn",
+  "name": "Shona",
+  "native": "chiShona"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052422"
+  },
+  "code": "sr",
+  "name": "Serbian",
+  "native": "Српски"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052425"
+  },
+  "code": "su",
+  "name": "Sundanese",
+  "native": "Basa Sunda"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052428"
+  },
+  "code": "ta",
+  "name": "Tamil",
+  "native": "தமிழ்"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05242b"
+  },
+  "code": "th",
+  "name": "Thai",
+  "native": "ไทย / Phasa Thai"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05242c"
+  },
+  "code": "ti",
+  "name": "Tigrinya",
+  "native": "ትግርኛ"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05242e"
+  },
+  "code": "tl",
+  "name": "Tagalog / Filipino",
+  "native": "Tagalog"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052430"
+  },
+  "code": "to",
+  "name": "Tonga",
+  "native": "Lea Faka-Tonga"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052433"
+  },
+  "code": "tt",
+  "name": "Tatar",
+  "native": "Tatarça"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052434"
+  },
+  "code": "tw",
+  "name": "Twi",
+  "native": "Twi"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052435"
+  },
+  "code": "ty",
+  "name": "Tahitian",
+  "native": "Reo Mā`ohi"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05243b"
+  },
+  "code": "vi",
+  "name": "Vietnamese",
+  "native": "Tiếng Việt"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052444"
+  },
+  "code": "zu",
+  "name": "Zulu",
+  "native": "isiZulu"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05239f"
+  },
+  "code": "br",
+  "name": "Breton",
+  "native": "Brezhoneg"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523a6"
+  },
+  "code": "cs",
+  "name": "Czech",
+  "native": "Česky"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523a9"
+  },
+  "code": "cy",
+  "name": "Welsh",
+  "native": "Cymraeg"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523ac"
+  },
+  "code": "dv",
+  "name": "Divehi",
+  "native": "ދިވެހިބަސް",
+  "rtl": 1
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523b6"
+  },
+  "code": "ff",
+  "name": "Peul",
+  "native": "Fulfulde"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523b8"
+  },
+  "code": "fj",
+  "name": "Fijian",
+  "native": "Na Vosa Vakaviti"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523b9"
+  },
+  "code": "fo",
+  "name": "Faroese",
+  "native": "Føroyskt"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523bb"
+  },
+  "code": "fy",
+  "name": "West Frisian",
+  "native": "Frysk"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523c1"
+  },
+  "code": "gv",
+  "name": "Manx",
+  "native": "Gaelg"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523c3"
+  },
+  "code": "he",
+  "name": "Hebrew",
+  "native": "עברית",
+  "rtl": 1
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523c9"
+  },
+  "code": "hy",
+  "name": "Armenian",
+  "native": "Հայերեն"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523ca"
+  },
+  "code": "hz",
+  "name": "Herero",
+  "native": "Otsiherero"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523cd"
+  },
+  "code": "ie",
+  "name": "Interlingue",
+  "native": "Interlingue"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523d0"
+  },
+  "code": "ik",
+  "name": "Inupiak",
+  "native": "Iñupiak"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523d1"
+  },
+  "code": "io",
+  "name": "Ido",
+  "native": "Ido"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523d4"
+  },
+  "code": "iu",
+  "name": "Inuktitut",
+  "native": "ᐃᓄᒃᑎᑐᑦ"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523d7"
+  },
+  "code": "ka",
+  "name": "Georgian",
+  "native": "ქართული"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523db"
+  },
+  "code": "kk",
+  "name": "Kazakh",
+  "native": "Қазақша"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523e5"
+  },
+  "code": "ky",
+  "name": "Kirghiz",
+  "native": "Kırgızca / Кыргызча"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523e6"
+  },
+  "code": "la",
+  "name": "Latin",
+  "native": "Latina"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a0523ee"
+  },
+  "code": "lv",
+  "name": "Latvian",
+  "native": "Latviešu"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052400"
+  },
+  "code": "nn",
+  "name": "Norwegian Nynorsk",
+  "native": "Norsk nynorsk"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052407"
+  },
+  "code": "om",
+  "name": "Oromo",
+  "native": "Oromoo"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05240d"
+  },
+  "code": "ps",
+  "name": "Pashto",
+  "native": "پښتو",
+  "rtl": 1
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052411"
+  },
+  "code": "rn",
+  "name": "Kirundi",
+  "native": "Kirundi"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052418"
+  },
+  "code": "se",
+  "name": "Northern Sami",
+  "native": "Sámegiella"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052419"
+  },
+  "code": "sg",
+  "name": "Sango",
+  "native": "Sängö"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052423"
+  },
+  "code": "ss",
+  "name": "Swati",
+  "native": "SiSwati"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052426"
+  },
+  "code": "sv",
+  "name": "Swedish",
+  "native": "Svenska"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05242a"
+  },
+  "code": "tg",
+  "name": "Tajik",
+  "native": "Тоҷикӣ"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05242d"
+  },
+  "code": "tk",
+  "name": "Turkmen",
+  "native": "Туркмен / تركمن"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05242f"
+  },
+  "code": "tn",
+  "name": "Tswana",
+  "native": "Setswana"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052431"
+  },
+  "code": "tr",
+  "name": "Turkish",
+  "native": "Türkçe"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052432"
+  },
+  "code": "ts",
+  "name": "Tsonga",
+  "native": "Xitsonga"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052437"
+  },
+  "code": "uk",
+  "name": "Ukrainian",
+  "native": "Українська"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052438"
+  },
+  "code": "ur",
+  "name": "Urdu",
+  "native": "اردو",
+  "rtl": 1
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05243a"
+  },
+  "code": "ve",
+  "name": "Venda",
+  "native": "Tshivenḓa"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a05243c"
+  },
+  "code": "vo",
+  "name": "Volapük",
+  "native": "Volapük"
+},{
+  "_id": {
+    "$oid": "6266d3623a3631097a052443"
+  },
+  "code": "zh",
+  "name": "Chinese",
+  "native": "中文"
+}]

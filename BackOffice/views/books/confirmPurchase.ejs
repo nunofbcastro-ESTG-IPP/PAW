@@ -1,0 +1,189 @@
+<div class="p-4 flex items-center justify-center h-full">
+  <div
+    class="p-4 w-2/4 bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 lg:p-8"
+  >
+    <form class="space-y-6" action="/book/purchaseBook" method="POST">
+      <h5 class="text-xl font-medium text-gray-900">
+        Almost there, check purchase data and confirm it!
+      </h5>
+      <div class="grid xl:grid-cols-2 xl:gap-6">
+        <div>
+          <label
+            for="client"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Client email</label
+          >
+          <input
+            type="email"
+            name="client"
+            id="client"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            value="<%= purchase.clientEmail%>"
+            readonly
+          />
+        </div>
+        <div>
+          <label for="name" class="block mb-2 text-sm font-medium text-gray-900"
+            >Client email</label
+          >
+          <input
+            type="email"
+            name="name"
+            id="name"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            value="<%= user.name%>"
+            readonly
+          />
+        </div>
+        <div>
+          <label for="isbn" class="block mb-2 text-sm font-medium text-gray-900"
+            >ISBN</label
+          >
+          <input
+            type="number"
+            name="isbn"
+            id="isbn"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            value="<%= purchase.books[0].isbn%>"
+            readonly
+          />
+        </div>
+        <div>
+          <label
+            for="title"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Book title</label
+          >
+          <input
+            type="text"
+            name="title"
+            id="title"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            value="<%= purchase.books[0].title%>"
+            readonly
+          />
+        </div>
+        <div>
+          <label
+            for="state"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >State</label
+          >
+          <input
+            type="text"
+            name="state"
+            id="state"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            value="<%= purchase.books[0].state%>"
+            readonly
+          />
+        </div>
+        <div>
+          <label
+            for="quantity"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Quantity</label
+          >
+          <input
+            type="number"
+            name="quantity"
+            id="quantity"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            value="<%= purchase.books[0].quantity%>"
+            readonly
+          />
+        </div>
+        <div>
+          <label
+            for="totalPrice"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Total price</label
+          >
+          <input
+            type="Number"
+            name="totalPrice"
+            id="totalPrice"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            readonly
+          />
+          <p id="usePointsAlert" class="mt-2 mb-2 text-sm text-green-600"></p>
+        </div>
+        <% pointsInput = user.points <= 0 ? "hidden" : "" %>
+        <div class="<%= pointsInput %>">
+          <label
+            for="pointsUsed"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Points used</label
+          >
+          <input
+            type="Number"
+            name="pointsUsed"
+            id="pointsUsed"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            value="0"
+            readonly
+          />
+        </div>
+      </div>
+      <div class="<%= pointsInput %> flex items-center">
+        <input
+          id="usePoints"
+          name="usePoints"
+          type="checkbox"
+          onChange="getTotalPrice()"
+          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+        />
+        <label
+          for="checked-checkbox"
+          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+          >The user <%= user.name%> have <%= user.points%> points, he want to
+          use it?</label
+        >
+      </div>
+      <button
+        id="confirmPurchase"
+        type="submit"
+        class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+      >
+        Confirm
+      </button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const totalPriceInput = document.getElementById('totalPrice');
+  const quantityInput = document.getElementById('quantity');
+  const unitaryPrice = Number('<%= purchase.books[0].unitaryPrice%>');
+  const usePointsInput = document.getElementById('usePoints');
+  const userPoints = Number('<%= user.points%>');
+  const usePointsAlert = document.getElementById('usePointsAlert');
+  const pointsUsedInput = document.getElementById('pointsUsed');
+
+  getTotalPrice();
+
+  function getTotalPrice() {
+    if (typeof usePointsInput != 'undefined' && usePointsInput.checked) {
+      let discount = 0;
+      let pointsUsed = 0;
+
+      if (userPoints > 100) {
+        pointsUsed = 100;
+        discount = totalPriceInput.value * (pointsUsed / 100);
+      } else {
+        pointsUsed = userPoints;
+        discount = totalPriceInput.value * (pointsUsed / 100);
+      }
+      pointsUsedInput.value = pointsUsed;
+      totalPriceInput.value = totalPriceInput.value - discount;
+      usePointsAlert.hidden = false;
+      usePointsAlert.innerHTML =
+        'Valor total incluindo desconto de ' + discount + '€';
+    } else {
+      usePointsAlert.hidden = true;
+      totalPriceInput.value = unitaryPrice * quantityInput.value;
+      pointsUsedInput.value = 0;
+    }
+  }
+</script>
+<script src="/flowbite/dist/datepicker.js"></script>

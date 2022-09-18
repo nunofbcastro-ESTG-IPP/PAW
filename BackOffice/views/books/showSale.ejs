@@ -1,0 +1,50 @@
+<div class="container x-3/4 p-5">
+  <div class="grid grid-cols-2 items-center justify-center h-full">
+    <div class="flex justify-end pr-10">
+      <img
+        src="/images/sales/<%= sale.coverPhoto %>"
+        class="object-cover h-auto w-72"
+      />
+    </div>
+    <div>
+      <h1 class="text-4xl font-normal leading-normal text-slate-800">
+        <%= sale.title %>
+      </h1>
+      <h2
+        class="text-2xl font-normal leading-normal mt-0 mb-2 text-neutral-800"
+      >
+        submitted by <%= sale.clientEmail %>
+      </h2>
+      <h3>Description: <%= sale.description %></h3>
+      <h3>Price: <%= sale.price %>€</h3>
+      <% if((typeof userProfile != "undefined" && userProfile.role != "Client")
+      && sale.status == "Pendent"){ %>
+      <div>
+        <form
+          action="/book/changeSaleStatus/<%= sale._id %>/Accepted"
+          method="POST"
+        >
+          <button
+            type="submit"
+            class="mt-8 text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+          >
+            Accept
+          </button>
+        </form>
+        <form
+          action="/book/changeSaleStatus/<%= sale._id %>/Rejected"
+          method="POST"
+        >
+          <button
+            type="submit"
+            class="mt-8 text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
+          >
+            Reject
+          </button>
+        </form>
+      </div>
+
+      <% } %>
+    </div>
+  </div>
+</div>

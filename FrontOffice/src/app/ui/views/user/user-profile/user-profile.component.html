@@ -1,0 +1,130 @@
+<div class="p-4 flex items-center justify-center">
+  <div
+    class="p-4 md:w-2/4 w-full bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 lg:p-8"
+  >
+    <div>
+      <h5 class="text-xl font-medium text-gray-900">Profile</h5>
+      <div class="flex flex-col items-center pb-10">
+        <custom-img
+          [src]="imageSrc + image"
+          [imageNotFound]="imageNotFoundUser"
+          [class]="'mb-3 w-32 h-32 rounded-full shadow-lg'"
+        ></custom-img>
+      </div>
+      <div class="grid xl:grid-cols-2 xl:gap-6">
+        <div>
+          <label for="name" class="block mb-2 text-sm font-medium text-gray-900"
+            >Name</label
+          >
+          <input
+            type="text"
+            class="input"
+            placeholder="Your name (ex: João Faria)"
+            [(ngModel)]="name.value"
+            (ngModelChange)="nameDebounce.next($event)"
+          />
+          <p *ngIf="name.error" class="errorLabel">
+            {{ name.error }}
+          </p>
+        </div>
+        <div>
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Email</label
+          >
+          <input
+            type="email"
+            class="input"
+            placeholder="Your email (ex: joaofaria@gmail.com)"
+            [(ngModel)]="email.value"
+            (ngModelChange)="emailDebounce.next($event)"
+          />
+          <p *ngIf="email.error" class="errorLabel">
+            {{ email.error }}
+          </p>
+        </div>
+        <div>
+          <label
+            for="password"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Password</label
+          >
+          <input
+            type="password"
+            class="input"
+            placeholder="**********"
+            [(ngModel)]="password.value"
+            (ngModelChange)="passwordDebounce.next($event)"
+          />
+          <p *ngIf="password.error" class="errorLabel">
+            {{ password.error }}
+          </p>
+        </div>
+        <div>
+          <label
+            for="phoneNumber"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Phone Number</label
+          >
+          <input
+            type="number"
+            class="input"
+            placeholder="Your phone number (ex: 913959860)"
+            [(ngModel)]="phoneNumber.value"
+            (ngModelChange)="phoneNumberDebounce.next($event)"
+          />
+          <p *ngIf="phoneNumber.error" class="errorLabel">
+            {{ phoneNumber.error }}
+          </p>
+        </div>
+        <div>
+          <label
+            for="address"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Address</label
+          >
+          <input
+            type="text"
+            class="input"
+            placeholder="Your address (ex: R. do Curral, 4610-156 Margaride (Santa Eulália), Portugal)"
+            [(ngModel)]="address.value"
+            (ngModelChange)="addressDebounce.next($event)"
+          />
+          <p *ngIf="address.error" class="errorLabel">
+            {{ address.error }}
+          </p>
+        </div>
+        <div>
+          <label
+            for="dateOfBirthday"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Date Of Birthday</label
+          >
+          <input
+            type="date"
+            class="inputText"
+            data-date-format="dd/mm/yyyy"
+            class="input"
+            [(ngModel)]="dateBirthday.value"
+            (ngModelChange)="dateBirthdayDebounce.next($event)"
+          />
+          <p *ngIf="dateBirthday.error" class="errorLabel">
+            {{ dateBirthday.error }}
+          </p>
+        </div>
+        <div>
+          <label
+            for="points"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Points</label
+          >
+          <input readonly type="number" class="input" value="{{ points }}" />
+        </div>
+      </div>
+      <div class="mt-5">
+        <button (click)="edit()" class="w-full button">Edit</button>
+      </div>
+    </div>
+  </div>
+</div>

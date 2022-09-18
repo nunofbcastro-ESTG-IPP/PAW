@@ -1,0 +1,859 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "",
+    "version": "1.0.0",
+    "title": "Swagger BookMarket"
+  },
+  "host": "localhost:3000",
+  "basePath": "/api/v1",
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "tags": [
+    {
+      "name": "Books",
+      "description": "Api for books in the system"
+    },
+    {
+      "name": "Purchases",
+      "description": "Api for purchases in the system"
+    },
+    {
+      "name": "Sales",
+      "description": "Api for sales in the system"
+    },
+    {
+      "name": "Susbribers",
+      "description": "Api for susbribers in the system"
+    },
+    {
+      "name": "Users",
+      "description": "Api for users in the system"
+    },
+    {
+      "name": "Auth",
+      "description": "API for system authentication"
+    }
+  ],
+  "schemes": ["http"],
+  "paths": {
+    "/auth/login": {
+      "post": {
+        "tags": ["Auth"],
+        "description": "Login to the website",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "requered": true,
+            "description": "Login data",
+            "schema": {
+              "$ref": "#/definitions/Login"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully logged in",
+            "schema": {
+              "$ref": "#/definitions/Authenticated"
+            }
+          },
+          "401": {
+            "description": "Invalid data",
+            "schema": {
+              "$ref": "#/definitions/Authenticated"
+            }
+          },
+          "404": {
+            "description": "Invalid data",
+            "type": "string"
+          },
+          "500": {
+            "description": "Server error",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "/auth/register": {
+      "post": {
+        "tags": ["Auth"],
+        "description": "Register to the website",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "requered": true,
+            "description": "Login data",
+            "schema": {
+              "$ref": "#/definitions/Register"
+            }
+          }
+        ],
+
+        "responses": {
+          "200": {
+            "description": "Successfully logged in",
+            "schema": {
+              "$ref": "#/definitions/Authenticated"
+            }
+          },
+          "401": {
+            "description": "Invalid data",
+            "schema": {
+              "$ref": "#/definitions/Authenticated"
+            }
+          },
+          "404": {
+            "description": "Invalid data",
+            "type": "string"
+          },
+          "500": {
+            "description": "Server error",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "/books": {
+      "get": {
+        "tags": ["Books"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "page",
+            "requered": true,
+            "description": "page",
+            "type": "number"
+          },
+          {
+            "in": "path",
+            "name": "search",
+            "requered": true,
+            "description": "search",
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "sort",
+            "requered": true,
+            "description": "sort",
+            "type": "string"
+          },
+          {
+            "in": "path",
+            "name": "ordination",
+            "requered": true,
+            "description": "ordination",
+            "type": "number"
+          }
+        ],
+        "description": "List book",
+        "responses": {
+          "200": {
+            "description": "List of books",
+            "schema": {
+              "$ref": "#/definitions/Books"
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "/books/{booksId}": {
+      "get": {
+        "tags": ["Books"],
+        "description": "Find book",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "booksId",
+            "description": "Id of book that we want find",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "page",
+            "requered": true,
+            "description": "page",
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Book is found",
+            "schema": {
+              "$ref": "#/definitions/Book"
+            }
+          }
+        }
+      }
+    },
+    "/books/addReview/{booksId}": {
+      "post": {
+        "tags": ["Books"],
+        "description": "Add review in book",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "description": "User token",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "path",
+            "name": "booksId",
+            "description": "Id book",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "requered": true,
+            "description": "Review data",
+            "schema": {
+              "$ref": "#/definitions/Review"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully logged in",
+            "type": "string"
+          },
+          "500": {
+            "description": "Server error",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "/purchases": {
+      "get": {
+        "tags": ["Purchases"],
+        "description": "Get purchases user",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "description": "User token",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "page",
+            "in": "path",
+            "description": "page",
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of purchases",
+            "schema": {
+              "$ref": "#/definitions/Purchases"
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "/purchases/booksCart": {
+      "post": {
+        "tags": ["Purchases"],
+        "description": "Get books from cart",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "List with book index",
+            "schema": {
+              "$ref": "#/definitions/CartId"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List Books",
+            "schema": {
+              "type": "array",
+              "$ref": "#/definitions/_id"
+            }
+          },
+          "404": {
+            "description": "No user found.",
+            "type": "string"
+          },
+          "500": {
+            "description": "Server error",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "/purchases/payment": {
+      "post": {
+        "tags": ["Purchases"],
+        "description": "Pay order",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "description": "User token",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "body",
+            "schema": {
+              "$ref": "#/definitions/Payment"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucess pay",
+            "type": "string"
+          },
+          "500": {
+            "description": "Server error",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "/sales": {
+      "get": {
+        "tags": ["Sales"],
+        "description": "Get sales of client",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "description": "User token",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "page",
+            "in": "path",
+            "description": "page",
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of sales",
+            "schema": {
+              "$ref": "#/definitions/Sales"
+            }
+          },
+          "500": {
+            "description": "Server error",
+            "type": "string"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Sales"],
+        "description": "Create Sale",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "description": "User token",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "body",
+            "schema": {
+              "$ref": "#/definitions/SalesBody"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sucess pay",
+            "type": "string"
+          },
+          "500": {
+            "description": "Server error",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "/subscriber": {
+      "post": {
+        "tags": ["Susbribers"],
+        "description": "Subscribe to platform news",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Email that will subscribe to the service",
+            "schema": {
+              "$ref": "#/definitions/Subscriber"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully logged in",
+            "type": "string"
+          },
+          "500": {
+            "description": "Server error",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "/user": {
+      "get": {
+        "tags": ["Users"],
+        "description": "Get data user",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "headers",
+            "description": "User token",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "403": {
+            "description": "Invalid token",
+            "type": "string"
+          },
+          "500": {
+            "description": "Server error",
+            "type": "string"
+          }
+        }
+      },
+      "put": {
+        "tags": ["Users"],
+        "description": "Edit user",
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "headers",
+            "description": "User token",
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Email that will subscribe to the service",
+            "schema": {
+              "$ref": "#/definitions/UserUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully changed",
+            "type": "string"
+          },
+          "500": {
+            "description": "Server error",
+            "type": "string"
+          },
+          "404": {
+            "description": "Invalid user",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Login": {
+      "required": ["email", "password"],
+      "properties": {
+        "email": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "password": {
+          "schema": {
+            "$ref": "#/definitions/Password"
+          }
+        }
+      }
+    },
+    "Register": {
+      "required": ["email", "password", "name", "dateOfBirthday"],
+      "properties": {
+        "email": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "password": {
+          "schema": {
+            "$ref": "#/definitions/Password"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "dateOfBirthday": {
+          "schema": {
+            "$ref": "#/definitions/Date"
+          }
+        }
+      }
+    },
+    "Authenticated": {
+      "required": ["auth", "token", "expiresIn"],
+      "properties": {
+        "auth": {
+          "type": "boolean",
+          "uniqueItems": true
+        },
+        "token": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "expiresIn": {
+          "type": "number",
+          "uniqueItems": true
+        }
+      }
+    },
+    "Book": {
+      "required": [
+        "_id",
+        "title",
+        "descrition",
+        "author",
+        "number_of_pages",
+        "publishers",
+        "publishDate",
+        "lang",
+        "price",
+        "state"
+      ],
+      "properties": {
+        "_id": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "title": {
+          "type": "string"
+        },
+        "descrition": {
+          "type": "string"
+        },
+        "author": {
+          "type": "string"
+        },
+        "number_of_pages": {
+          "type": "number"
+        },
+        "publishers": {
+          "type": "string"
+        },
+        "publishDate": {
+          "$ref": "#/definitions/Date"
+        },
+        "lang": {
+          "type": "string"
+        },
+        "price": {
+          "type": "array"
+        },
+        "state": {
+          "type": "string"
+        },
+        "review": {
+          "type": "array"
+        }
+      }
+    },
+    "Books": { "type": "array", "$ref": "#/definitions/Book" },
+    "Review": {
+      "required": ["review", "rating"],
+      "properties": {
+        "review": {
+          "type": "string"
+        },
+        "rating": {
+          "type": "number"
+        }
+      }
+    },
+    "Purchase": {
+      "required": [
+        "_id",
+        "isbn",
+        "title",
+        "state",
+        "quantity",
+        "unitaryPrice",
+        "image",
+        "shipping",
+        "pointsUsed",
+        "totalPrice",
+        "purchased_at"
+      ],
+      "properties": {
+        "_id": {
+          "type": "number"
+        },
+        "isbn": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "number"
+        },
+        "unitaryPrice": {
+          "type": "number"
+        },
+        "image": {
+          "type": "string"
+        },
+        "shipping": {
+          "$ref": "#/definitions/Shipping"
+        },
+        "pointsUsed": {
+          "type": "number"
+        },
+        "totalPrice": {
+          "type": "number"
+        },
+        "purchased_at": {
+          "$ref": "#/definitions/Date"
+        }
+      }
+    },
+    "Shipping": {
+      "required": ["name", "phoneNumber", "address"],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "number"
+        },
+        "address": {
+          "type": "string"
+        }
+      }
+    },
+    "Purchases": { "type": "array", "$ref": "#/definitions/Purchase" },
+    "Payment": {
+      "required": ["token", "cart", "name", "pointsUsed"],
+      "properties": {
+        "token": {
+          "type": "string"
+        },
+        "cart": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "pointsUsed": {
+          "type": "number"
+        }
+      }
+    },
+    "Subscriber": {
+      "required": ["email"],
+      "properties": {
+        "email": {
+          "type": "string"
+        }
+      }
+    },
+    "UserUpdate": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "password": {
+          "schema": {
+            "$ref": "#/definitions/Password"
+          }
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "dateOfBirthday": {
+          "schema": {
+            "$ref": "#/definitions/Date"
+          }
+        }
+      }
+    },
+    "User": {
+      "required": [
+        "created_at",
+        "updated_at",
+        "profileImage",
+        "points",
+        "role",
+        "phoneNumber",
+        "email",
+        "name",
+        "_id"
+      ],
+      "properties": {
+        "_id": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "name": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "email": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "phoneNumber": {
+          "type": "number",
+          "uniqueItems": true
+        },
+        "address": {
+          "type": "string"
+        },
+        "dateOfBirthday": {
+          "type": "Date"
+        },
+        "profileImage": {
+          "type": "string"
+        },
+        "points": {
+          "type": "number"
+        },
+        "purchases": {
+          "type": "array"
+        },
+        "role": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "Date"
+        },
+        "updated_at": {
+          "type": "Date"
+        }
+      }
+    },
+    "_id": {
+      "type": "string"
+    },
+    "Date": {
+      "type": "string",
+      "format": "date-time",
+      "required": true
+    },
+    "Password": {
+      "type": "string",
+      "format": "password",
+      "required": true
+    },
+    "Sale": {
+      "required": [
+        "clientId",
+        "clientEmail",
+        "bookIsbn",
+        "title",
+        "description",
+        "price",
+        "status"
+      ],
+      "properties": {
+        "clientId": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "clientEmail": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "bookIsbn": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "title": {
+          "type": "string"
+        },
+        "coverPhoto": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "price": {
+          "type": "number"
+        },
+        "status": {
+          "type": "string"
+        }
+      }
+    },
+    "Sales": { "type": "array", "$ref": "#/definitions/Sale" },
+    "SalesBody": {
+      "required": ["bookIsbn", "title", "description", "price", "coverPhoto"],
+      "properties": {
+        "bookIsbn": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "price": {
+          "type": "number"
+        },
+        "coverPhoto": {
+          "type": "string"
+        }
+      }
+    },
+    "CartId": {
+      "type": "array",
+      "$ref": "#/definitions/_id"
+    }
+  }
+}

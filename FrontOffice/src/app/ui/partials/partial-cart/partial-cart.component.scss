@@ -1,0 +1,4 @@
+.limitCharacters {
+  @apply overflow-hidden text-ellipsis whitespace-nowrap inline-block;
+  max-width: 13ch;
+}

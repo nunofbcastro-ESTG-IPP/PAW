@@ -1,0 +1,173 @@
+<div class="drawer drawer-mobile h-full">
+  <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content flex flex-col">
+    <!-- Page content here -->
+    <div
+      class="relative z-10 flex items-baseline justify-between p-6 border-b border-gray-200"
+    >
+      <h1
+        class="sm:text-4xl text-xl font-extrabold tracking-tight text-gray-900"
+      >
+        Buy the best books here!
+      </h1>
+
+      <div class="flex items-center">
+        <div class="relative inline-block text-left">
+          <div>
+            <button
+              type="button"
+              class="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900"
+              id="menu-button"
+              aria-expanded="false"
+              aria-haspopup="true"
+              (click)="expandOrCollapase()"
+            >
+              Sort
+              <!-- Heroicon name: solid/chevron-down -->
+              <svg
+                class="flex-shrink-0 -mr-1 ml-1 h-5 w-5 text-gray-400 group-hover:text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div
+            class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-2xl bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="menu-button"
+            tabindex="-1"
+            [@collapse]="collapsed"
+          >
+            <div class="py-1" role="none">
+              <a
+                (click)="sortClick('updated_at', 1)"
+                class="text-gray-500 block px-4 py-2 text-sm"
+                role="menuitem"
+                tabindex="-1"
+                id="menu-item-2"
+              >
+                Newest asc
+              </a>
+
+              <a
+                (click)="sortClick('updated_at', -1)"
+                class="text-gray-500 block px-4 py-2 text-sm"
+                role="menuitem"
+                tabindex="-1"
+                id="menu-item-2"
+              >
+                Newest desc
+              </a>
+
+              <a
+                (click)="sortClick('title', 1)"
+                class="text-gray-500 block px-4 py-2 text-sm"
+                role="menuitem"
+                tabindex="-1"
+                id="menu-item-2"
+              >
+                Title asc
+              </a>
+
+              <a
+                (click)="sortClick('title', -1)"
+                class="text-gray-500 block px-4 py-2 text-sm"
+                role="menuitem"
+                tabindex="-1"
+                id="menu-item-2"
+              >
+                Title desc
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <label
+          for="my-drawer-2"
+          class="p-2 -m-2 ml-4 sm:ml-6 text-gray-400 hover:text-gray-500 drawer-button lg:hidden"
+        >
+          <span class="sr-only">Filters</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </label>
+      </div>
+    </div>
+
+    <div class="m-4 flex items-center justify-center">
+      <div class="flex flex-wrap overflow-hidden">
+        <div class="flex ml-14 py-4" *ngFor="let b of books; let i = index">
+          <div
+            class="bg-white w-52 rounded overflow-hidden shadow-xl mb-5"
+            routerLink="/book/bookDetails/{{ b._id }}"
+          >
+            <custom-img
+              [src]="imageUrl + b.image"
+              [class]="'w-full h-60 object-cover'"
+            ></custom-img>
+            <div class="py-4 px-6">
+              <div class="font-bold text-xl">{{ b.title }}</div>
+              <p class="text-gray-700 mt-2">by {{ b.author }}</p>
+            </div>
+            <div class="h-px bg-gray-200"></div>
+            <div class="px-6 pb-4">
+              <p class="text-gray-700 mt-2">
+                Starting from <b>{{ getLowPrice(b) }}€</b>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav
+      class="m-4 flex items-center justify-center"
+      aria-label="Page navigation"
+    >
+      <ul class="inline-flex -space-x-px">
+        <li>
+          <a (click)="selectPage(1)" class="pageFirst">First</a>
+        </li>
+        <li *ngFor="let number of paginationList">
+          <a
+            (click)="selectPage(number)"
+            routerLink="/book/bookList"
+            [ngClass]="
+              this.pageSelected != number ? 'pageNumber' : 'pageActive'
+            "
+            >{{ number }}</a
+          >
+        </li>
+        <li>
+          <a (click)="selectPage(pageLast)" class="pageLast">Last</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="drawer-side">
+    <label for="my-drawer-2" class="drawer-overlay"></label>
+    <div class="menu p-4 w-80 backgroundColor text-base-content">
+      <app-book-filters (myEvent)="searchClick($event)"></app-book-filters>
+    </div>
+  </div>
+</div>

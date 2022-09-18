@@ -1,0 +1,43 @@
+<p class="text-base">
+  Leave here your honest opinion and experience about this book so that other
+  customers can have a better approach on their future purchases. BookMarket
+  thanks you for sharing.
+</p>
+<form [formGroup]="reviewForm" (ngSubmit)="onSubmit()">
+  <div class="justify-center items-center pt-7">
+    <div class="flex items-start space-x-4">
+      <div class="min-w-0 flex-1">
+        <div
+          class="border border-gray-300 rounded-lg shadow-sm overflow-hidden focus-within:border-indigo-500 focus-within:ring-1 focus-within:ring-indigo-500"
+        >
+          <label for="comment" class="sr-only">Add your comment</label>
+          <textarea
+            rows="3"
+            name="comment"
+            id="comment"
+            class="block w-full py-3 border-0 resize-none focus:ring-0 sm:text-sm"
+            placeholder="Add your comment..."
+            formControlName="review"
+          ></textarea>
+
+          <!-- Spacer element to match the height of the toolbar -->
+          <div class="py-2" aria-hidden="true">
+            <!-- Matches height of button in toolbar (1px border + 36px content height) -->
+            <div class="py-px">
+              <div class="h-9"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-5">
+      <p class="pb-3">Please, rate this book from 1 to 5 starts:</p>
+      <p-rating [cancel]="false" formControlName="rating"></p-rating>
+    </div>
+
+    <div class="form-group justify-center items-center pt-7">
+      <button class="button" type="submit">Submit Review</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,62 @@
+<input
+  type="search"
+  placeholder="Search"
+  class="input"
+  [(ngModel)]="search"
+  (ngModelChange)="searchDebounce.next($event)"
+/>
+
+<div class="divider"></div>
+
+<div tabindex="0" class="collapse collapse-arrow">
+  <input type="checkbox" />
+  <div class="collapse-title text-lg font-medium">Price</div>
+  <div class="collapse-content">
+    <input type="range" min="0" max="100" value="25" class="range" step="25" />
+    <div class="w-full flex justify-between text-xs px-2">
+      <span>0%</span>
+      <span>25%</span>
+      <span>50%</span>
+      <span>75%</span>
+      <span>100%</span>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div tabindex="0" class="collapse collapse-arrow">
+  <input type="checkbox" />
+  <div class="collapse-title text-lg font-medium">Stock</div>
+  <div class="collapse-content">
+    <div class="pt-1">
+      <div class="flex items-center">
+        <input
+          id="filter-color-0"
+          name="color[]"
+          value="white"
+          type="checkbox"
+          class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
+        />
+        <label for="filter-color-0" class="ml-3 text-sm text-gray-600">
+          In stock
+        </label>
+      </div>
+
+      <div class="flex items-center">
+        <input
+          id="filter-color-1"
+          name="color[]"
+          value="beige"
+          type="checkbox"
+          class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
+        />
+        <label for="filter-color-1" class="ml-3 text-sm text-gray-600">
+          Out of stock
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>

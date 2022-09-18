@@ -1,0 +1,347 @@
+[{
+  "_id": {
+    "$oid": "62a8aa854700c1498127eee7"
+  },
+  "clientId": {
+    "$oid": "626f109cc4bb37116bc6fdce"
+  },
+  "clientEmail": "client@gmail.com",
+  "books": [
+    {
+      "bookId": {
+        "$oid": "62a8a69c179d97be20ddf022"
+      },
+      "isbn": "9789899087255",
+      "title": "Eu Já Devia Saber",
+      "state": "new",
+      "quantity": 1,
+      "unitaryPrice": {
+        "$numberDecimal": "15"
+      },
+      "image": "1655219868178-558978242.jpg",
+      "_id": {
+        "$oid": "62a8aa854700c1498127eee8"
+      }
+    },
+    {
+      "bookId": {
+        "$oid": "62a8a8e3179d97be20ddf074"
+      },
+      "isbn": "9789899087279",
+      "title": "O Livro do Ric",
+      "state": "new",
+      "quantity": 1,
+      "unitaryPrice": {
+        "$numberDecimal": "15"
+      },
+      "image": "1655220451151-204035813.jpg",
+      "_id": {
+        "$oid": "62a8aa854700c1498127eee9"
+      }
+    }
+  ],
+  "shipping": {
+    "name": "Client",
+    "phoneNumber": 911911911,
+    "address": "R. do Curral 4610-108 Felgueiras, Portugal"
+  },
+  "pointsUsed": 9,
+  "totalPrice": {
+    "$numberDecimal": "27.3"
+  },
+  "purchased_at": {
+    "$date": {
+      "$numberLong": "1655220869986"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a8c6804a62f654b730d09c"
+  },
+  "clientId": {
+    "$oid": "626f109cc4bb37116bc6fdce"
+  },
+  "clientEmail": "client@gmail.com",
+  "books": [
+    {
+      "bookId": {
+        "$oid": "62a8b6ecc427cb266b12eed2"
+      },
+      "isbn": "9789727228607",
+      "title": "NODE.JS",
+      "state": "new",
+      "quantity": 1,
+      "unitaryPrice": {
+        "$numberDecimal": "20"
+      },
+      "image": "1655224044705-27003498.jpg",
+      "_id": {
+        "$oid": "62a8c6804a62f654b730d09d"
+      }
+    },
+    {
+      "bookId": {
+        "$oid": "62a8c57a4a62f654b730d054"
+      },
+      "isbn": "9781786467362",
+      "title": "Angularjs",
+      "state": "new",
+      "quantity": 1,
+      "unitaryPrice": {
+        "$numberDecimal": "52"
+      },
+      "image": "1655227770207-566711492.jpg",
+      "_id": {
+        "$oid": "62a8c6804a62f654b730d09e"
+      }
+    },
+    {
+      "bookId": {
+        "$oid": "62a8ac2c4700c1498127ef2e"
+      },
+      "isbn": "9789896661731",
+      "title": "O Homem Que Sou",
+      "state": "new",
+      "quantity": 1,
+      "unitaryPrice": {
+        "$numberDecimal": "16"
+      },
+      "image": "1655221292319-256376787.jpg",
+      "_id": {
+        "$oid": "62a8c6804a62f654b730d09f"
+      }
+    },
+    {
+      "bookId": {
+        "$oid": "62a8a69c179d97be20ddf022"
+      },
+      "isbn": "9789899087255",
+      "title": "Eu Já Devia Saber",
+      "state": "new",
+      "quantity": 1,
+      "unitaryPrice": {
+        "$numberDecimal": "15"
+      },
+      "image": "1655219868178-558978242.jpg",
+      "_id": {
+        "$oid": "62a8c6804a62f654b730d0a0"
+      }
+    }
+  ],
+  "shipping": {
+    "name": "Client",
+    "phoneNumber": 911911911,
+    "address": "R. do Curral 4610-108 Felgueiras, Portugal"
+  },
+  "pointsUsed": 3,
+  "totalPrice": {
+    "$numberDecimal": "99.91"
+  },
+  "purchased_at": {
+    "$date": {
+      "$numberLong": "1655228032726"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a9ddae1d56ac5eda3d7c2b"
+  },
+  "clientId": {
+    "$oid": "626f109cc4bb37116bc6fdce"
+  },
+  "clientEmail": "client@gmail.com",
+  "books": [
+    {
+      "bookId": {
+        "$oid": "62a8a69c179d97be20ddf022"
+      },
+      "isbn": "9789899087255",
+      "title": "Eu Já Devia Saber",
+      "state": "new",
+      "quantity": 1,
+      "unitaryPrice": {
+        "$numberDecimal": "15"
+      },
+      "image": "1655219868178-558978242.jpg",
+      "_id": {
+        "$oid": "62a9ddae1d56ac5eda3d7c2c"
+      }
+    }
+  ],
+  "shipping": {
+    "name": "Client",
+    "phoneNumber": 911911911,
+    "address": "R. do Curral 4610-108 Felgueiras, Portugal"
+  },
+  "pointsUsed": 3,
+  "totalPrice": {
+    "$numberDecimal": "14.55"
+  },
+  "purchased_at": {
+    "$date": {
+      "$numberLong": "1655299502808"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf0518079ae7f505f11b33"
+  },
+  "clientId": {
+    "$oid": "626f109cc4bb37116bc6fdce"
+  },
+  "clientEmail": "client@gmail.com",
+  "books": [
+    {
+      "bookId": {
+        "$oid": "62a8a69c179d97be20ddf022"
+      },
+      "isbn": "9789899087255",
+      "title": "Eu Já Devia Saber",
+      "state": "new",
+      "quantity": 1,
+      "unitaryPrice": {
+        "$numberDecimal": "15"
+      },
+      "_id": {
+        "$oid": "62bf0518079ae7f505f11b34"
+      }
+    }
+  ],
+  "pointsUsed": 4,
+  "totalPrice": {
+    "$numberDecimal": "14.4"
+  },
+  "purchased_at": {
+    "$date": {
+      "$numberLong": "1656685848731"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62bf0549079ae7f505f11b4c"
+  },
+  "clientId": {
+    "$oid": "626f1049c4bb37116bc6fdbb"
+  },
+  "clientEmail": "admin@gmail.com",
+  "books": [
+    {
+      "bookId": {
+        "$oid": "62a8a69c179d97be20ddf022"
+      },
+      "isbn": "9789899087255",
+      "title": "Eu Já Devia Saber",
+      "state": "new",
+      "quantity": 1,
+      "unitaryPrice": {
+        "$numberDecimal": "15"
+      },
+      "image": "1655219868178-558978242.jpg",
+      "_id": {
+        "$oid": "62bf0549079ae7f505f11b4d"
+      }
+    },
+    {
+      "bookId": {
+        "$oid": "62a8ac2c4700c1498127ef2e"
+      },
+      "isbn": "9789896661731",
+      "title": "O Homem Que Sou",
+      "state": "old",
+      "quantity": 2,
+      "unitaryPrice": {
+        "$numberDecimal": "11"
+      },
+      "image": "1655221292319-256376787.jpg",
+      "_id": {
+        "$oid": "62bf0549079ae7f505f11b4e"
+      }
+    },
+    {
+      "bookId": {
+        "$oid": "62a8c4964a62f654b730d01d"
+      },
+      "isbn": "9789893332719",
+      "title": "Na Cabeça de Putin",
+      "state": "old",
+      "quantity": 2,
+      "unitaryPrice": {
+        "$numberDecimal": "15"
+      },
+      "image": "1655227541961-294580520.jpg",
+      "_id": {
+        "$oid": "62bf0549079ae7f505f11b4f"
+      }
+    },
+    {
+      "bookId": {
+        "$oid": "62a8ac2c4700c1498127ef2e"
+      },
+      "isbn": "9789896661731",
+      "title": "O Homem Que Sou",
+      "state": "new",
+      "quantity": 1,
+      "unitaryPrice": {
+        "$numberDecimal": "16"
+      },
+      "image": "1655221292319-256376787.jpg",
+      "_id": {
+        "$oid": "62bf0549079ae7f505f11b50"
+      }
+    }
+  ],
+  "shipping": {
+    "name": "Admin",
+    "phoneNumber": 911911911,
+    "address": "R. do Curral 4610-108 Felgueiras, Portugal"
+  },
+  "pointsUsed": 0,
+  "totalPrice": {
+    "$numberDecimal": "83"
+  },
+  "purchased_at": {
+    "$date": {
+      "$numberLong": "1656685897254"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62db11bfb8832f54f7eb284d"
+  },
+  "clientId": {
+    "$oid": "626f109cc4bb37116bc6fdce"
+  },
+  "clientEmail": "client@gmail.com",
+  "books": [
+    {
+      "bookId": {
+        "$oid": "62a8a72e179d97be20ddf03b"
+      },
+      "isbn": "9789722074346",
+      "title": "A Mais Breve História da Rússia",
+      "state": "new",
+      "quantity": 1,
+      "unitaryPrice": {
+        "$numberDecimal": "19"
+      },
+      "_id": {
+        "$oid": "62db11bfb8832f54f7eb284e"
+      }
+    }
+  ],
+  "pointsUsed": 4,
+  "totalPrice": {
+    "$numberDecimal": "18.24"
+  },
+  "purchased_at": {
+    "$date": {
+      "$numberLong": "1658524095141"
+    }
+  },
+  "__v": 0
+}]

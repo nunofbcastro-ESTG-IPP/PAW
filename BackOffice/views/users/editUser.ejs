@@ -1,0 +1,173 @@
+<div class="p-4 flex items-center justify-center h-full">
+  <div
+    class="p-4 w-2/4 bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 lg:p-8"
+  >
+    <form
+      id="form"
+      class="space-y-6"
+      action="/users/update/<%= user._id%>"
+      method="post"
+    >
+      <h5 class="text-xl font-medium text-gray-900">User editor</h5>
+      <div class="flex flex-col items-center pb-10">
+        <img
+          class="mb-3 w-32 h-32 rounded-full shadow-lg"
+          src="/images/user/<%= user.profileImage %>"
+          alt="User Image"
+        />
+      </div>
+      <div class="grid xl:grid-cols-2 xl:gap-6">
+        <div>
+          <label for="name" class="block mb-2 text-sm font-medium text-gray-900"
+            >Name</label
+          >
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            value="<%= user.name %>"
+          />
+          <p id="nameError" class="hidden mt-2 text-sm text-red-600">Please provide a valid name.</p>
+        </div>
+        <div>
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Email</label
+          >
+          <input
+            type="text"
+            name="email"
+            id="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            value="<%= user.email %>"
+          />
+          <p id="emailError" class="hidden mt-2 text-sm text-red-600">Please provide a valid email.</p>
+        </div>
+        <div>
+          <label
+            for="phoneNumber"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Phone Number</label
+          >
+          <input
+            type="number"
+            name="phoneNumber"
+            id="phoneNumber"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="913959860"
+            value="<%= user.phoneNumber %>"
+          />
+          <p id="phoneNumberError" class="hidden mt-2 text-sm text-red-600">Please provide a valid phone number.</p>
+        </div>
+        <div>
+          <label
+            for="address"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Address</label
+          >
+          <input
+            type="text"
+            name="address"
+            id="address"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            value="<%= user.address %>"
+          />
+          <p id="addressError" class="hidden mt-2 text-sm text-red-600">Please provide a address.</p>
+        </div>
+        <div>
+          <label
+            for="dateOfBirthday"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Date Of Birthday</label
+          >
+          <input
+            datepicker-autohide
+            datepicker
+            datepicker-format="mm/dd/yyyy"
+            type="text"
+            name="dateOfBirthday"
+            id="dateOfBirthday"
+            value="<%= new Date(user.dateOfBirthday).toLocaleString('en', {
+              day: 'numeric', // numeric, 2-digit
+              year: 'numeric', // numeric, 2-digit
+              month: 'numeric', // numeric, 2-digit,
+          }) %>"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            value="<%= user.dateOfBirthday %>"
+          />
+          <p id="dateOfBirthdayError" class="hidden mt-2 text-sm text-red-600">Please provide a valid date Of birthday.</p>
+        </div>
+        <div>
+          <label
+            for="points"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Points</label
+          >
+          <input
+            type="text"
+            name="points"
+            id="points"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            value="<%= user.points %>"
+          />
+          <p id="pointsError" class="hidden mt-2 text-sm text-red-600">Please provide a valid points.</p>
+        </div>
+        <% if(userProfile.role != "Client") { %>
+        <div>
+          <label
+            for="role"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Role</label
+          >
+            <select
+              name="role"
+              id="role"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            >
+            <option><%= user.role%></option>
+            <% for(var i=0; i<roles.length;i++) { -%>
+              <% if(user.role != roles[i]) { %>
+              <option><%= roles[i]%></option>
+              <% } %>
+            <% } %>
+            </select>  
+            <p id="roleError" class="hidden mt-2 text-sm text-red-600">Please provide a valid role.</p>        
+        </div>
+        <% } %>
+        <% if(userProfile.role == "Admin") { %>
+        <div>
+          <label
+            for="status"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Status</label
+          >
+            <select
+              name="status"
+              id="status"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            >
+              <option value="Active">Active</option>
+              <option value="Inactive">Inactive</option>
+            </select>  
+            <p id="statusError" class="hidden mt-2 text-sm text-red-600">Please provide a valid status.</p>         
+        </div>
+        <% } %>
+      </div>
+      <button
+        id="editUser"
+        type="submit"
+        class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+      >
+        Edit
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="/javascripts/editUser.js"></script>
+<script>
+  selectStatus("<%= user.status %>");
+</script>
+<script src="/flowbite/dist/datepicker.js"></script>

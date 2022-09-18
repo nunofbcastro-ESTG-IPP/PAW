@@ -1,0 +1,29 @@
+<div class="h-full p-2 bg-white">
+  <p-tabView [(activeIndex)]="index" (onChange)="handleChange()">
+    <p-tabPanel header="user-profile">
+      <ng-template pTemplate="header">
+        <i class="pi pi-user"></i>&nbsp;
+        <span>User Profile</span>
+      </ng-template>
+      <app-user-profile></app-user-profile>
+    </p-tabPanel>
+    <p-tabPanel header="user-orders-history">
+      <ng-template pTemplate="header">
+        <i class="pi pi-shopping-cart"></i>&nbsp;
+        <span>Orders History</span>
+      </ng-template>
+      <app-user-orders-history
+        [pageIsSelected]="index == 1"
+      ></app-user-orders-history>
+    </p-tabPanel>
+    <p-tabPanel header="user-sales-history">
+      <ng-template pTemplate="header">
+        <i class="pi pi-money-bill"></i>&nbsp;
+        <span>Sales History</span>
+      </ng-template>
+      <app-user-sales-history
+        [pageIsSelected]="index == 2"
+      ></app-user-sales-history>
+    </p-tabPanel>
+  </p-tabView>
+</div>

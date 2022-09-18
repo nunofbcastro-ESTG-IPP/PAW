@@ -1,0 +1,199 @@
+<div class="mx-auto pb-24 lg:max-w-7xl lg:px-8">
+  <form
+    class="lg:grid lg:grid-cols-2 lg:gap-2 m-10"
+    [formGroup]="form"
+    (submit)="initPay()"
+  >
+    <div class="lg:mr-5 mr-0">
+      <div>
+        <h2 class="text-lg font-medium text-gray-900">Contact information</h2>
+
+        <div class="mt-6 grid grid-cols-4 gap-y-6 gap-x-4">
+          <div class="col-span-4">
+            <label
+              for="card-number"
+              class="block text-sm font-medium text-gray-700"
+              >Card number</label
+            >
+            <div id="card" class="inputPayment"></div>
+          </div>
+
+          <div class="col-span-4">
+            <label
+              for="name-on-card"
+              class="block text-sm font-medium text-gray-700"
+              >Name on card</label
+            >
+            <input
+              type="text"
+              class="inputPayment"
+              placeholder="ex: João Faria"
+              formControlName="name"
+              [ngClass]="{
+                'is-invalid':
+                  form.get('name').touched && form.get('name').errors != null
+              }"
+            />
+          </div>
+
+          <div class="col-span-3">
+            <label
+              for="expiration-date"
+              class="block text-sm font-medium text-gray-700"
+              >Expiration date (MM/YY)</label
+            >
+            <div id="exp" class="inputPayment"></div>
+          </div>
+
+          <div>
+            <label for="cvc" class="block text-sm font-medium text-gray-700"
+              >CVC</label
+            >
+            <div id="cvc" class="inputPayment"></div>
+          </div>
+
+          <div class="col-span-4">
+            <label
+              for="name-on-card"
+              class="block text-sm font-medium text-gray-700"
+              >Discount</label
+            >
+            <label class="label cursor-pointer">
+              <span class="label-text">Do you intend to use points?</span>
+              <input
+                type="checkbox"
+                checked="checked"
+                class="checkbox checkbox-primary"
+                formControlName="discount"
+                (ngModelChange)="getTotalPrice($event)"
+              />
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-warning shadow-lg mt-4" *ngIf="error">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="stroke-current flex-shrink-0 h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+            />
+          </svg>
+          <span>Warning: {{ error }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Order summary -->
+    <div class="mt-10 lg:mt-0 lg:ml-5 ml-0">
+      <h2 class="text-lg font-medium text-gray-900">Order summary</h2>
+
+      <div class="mt-4 bg-white border border-gray-200 rounded-lg shadow-sm">
+        <h3 class="sr-only">Items in your cart</h3>
+
+        <div class="max-h-72 overflow-y-auto">
+          <ul role="list" class="divide-y divide-gray-200">
+            <li class="flex py-6 px-4 sm:px-6" *ngFor="let item of itens">
+              <div class="flex-shrink-0">
+                <custom-img
+                  src="{{ imageUrl + item.image }}"
+                  [class]="'w-20 h-24 rounded-md object-cover'"
+                ></custom-img>
+              </div>
+
+              <div class="ml-6 flex-1 flex flex-col">
+                <div class="flex">
+                  <div class="min-w-0 flex-1">
+                    <h4 class="text-sm">
+                      <span
+                        class="font-medium text-gray-700 hover:text-gray-800"
+                      >
+                        {{ item.title }}
+                      </span>
+                      <p class="mt-1 text-sm text-gray-500">
+                        State: {{ item.state }}
+                      </p>
+                      <p class="mt-1 text-sm text-gray-500">
+                        Unit price :
+                        {{ caseDecimals(item.price * item.quantity, 2) }}€
+                      </p>
+                    </h4>
+                  </div>
+                </div>
+
+                <div class="flex-1 pt-2 flex items-end justify-between">
+                  <p class="mt-1 text-sm font-medium text-gray-900">
+                    Total price: {{ caseDecimals(item.price, 2) }}€
+                  </p>
+
+                  <div
+                    class="w-10 ml-4 rounded-md border border-gray-300 text-base font-medium text-gray-700 text-left shadow-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  >
+                    <p class="w-full flex items-center justify-center">
+                      {{ item.quantity }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- More products... -->
+          </ul>
+        </div>
+        <dl class="border-t border-gray-200 py-6 px-4 space-y-6 sm:px-6">
+          <div class="flex items-center justify-between">
+            <dt class="text-sm">Subtotal</dt>
+            <dd class="text-sm font-medium text-gray-900">
+              {{ caseDecimals(form.get("amount").value, 2) }}€
+            </dd>
+          </div>
+          <div class="flex items-center justify-between">
+            <dt class="text-sm">Shipping</dt>
+            <dd class="text-sm font-medium text-gray-900">0.00€</dd>
+          </div>
+          <div class="flex items-center justify-between">
+            <dt class="text-sm">Discount</dt>
+            <dd class="text-sm font-medium text-gray-900">
+              {{ caseDecimals(discount, 2) }}€
+            </dd>
+          </div>
+          <div
+            class="flex items-center justify-between border-t border-gray-200 pt-6"
+          >
+            <dt class="text-base font-medium">Total</dt>
+            <dd class="text-base font-medium text-gray-900">
+              {{ caseDecimals(form.get("amount").value - discount, 2) }}€
+            </dd>
+          </div>
+        </dl>
+
+        <div class="grid grid-cols-2 m-5">
+          <button type="submit" class="w-full button mr-2" (click)="previus()">
+            Previus
+          </button>
+          <button
+            type="submit"
+            class="w-full button ml-2"
+            [disabled]="form.invalid || form.disabled"
+          >
+            <div class="flex items-center justify-center">
+              <div
+                class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-5 w-5 mr-2"
+                *ngIf="visibleLoading"
+              ></div>
+              Pay
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,144 @@
+<div class="p-4 flex items-center justify-center h-full">
+  <div
+    class="p-4 w-2/4 bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 lg:p-8"
+  >
+    <form
+      id="form"
+      class="space-y-6"
+      action="/book/confirmPurchase"
+      method="POST"
+    >
+      <h5 class="text-xl font-medium text-gray-900">Book purchase</h5>
+      <div class="grid xl:grid-cols-2 xl:gap-6">
+        <div>
+          <label
+            for="client"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Client email</label
+          >
+
+          <input
+            type="email"
+            name="client"
+            id="client"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="ex: example@gmail.com "
+            required
+            oninvalid="this.setCustomValidity('Please enter the client email')"
+            oninput="this.setCustomValidity('')"
+          />
+          <% if(userError) { %>
+          <p id="error" class="mt-2 mb-2 text-sm text-red-600">
+            Any of our users have this email!
+          </p>
+          <% } %>
+        </div>
+        <div>
+          <label for="isbn" class="block mb-2 text-sm font-medium text-gray-900"
+            >ISBN</label
+          >
+          <input
+            type="number"
+            name="isbn"
+            id="isbn"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            value="<%= book.isbn%>"
+            readonly
+          />
+        </div>
+        <div>
+          <label
+            for="title"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Book title</label
+          >
+          <input
+            type="text"
+            name="title"
+            id="title"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            value="<%= book.title%>"
+            readonly
+          />
+        </div>
+        <div>
+          <label
+            for="state"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >State</label
+          >
+          <select
+            name="state"
+            id="state"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            required
+            oninvalid="this.setCustomValidity('Please enter the condition of book')"
+            oninput="this.setCustomValidity('')"
+          >
+            <option value="" disabled selected>
+              Select the book condition
+            </option>
+            <option>new</option>
+            <option>old</option>
+          </select>
+        </div>
+        <div>
+          <label
+            for="unitaryPrice"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Unitary price</label
+          >
+          <input
+            type="number"
+            name="unitaryPrice"
+            id="unitaryPrice"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="A state book is needed"
+            readonly
+          />
+        </div>
+        <div>
+          <label
+            for="quantity"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Quantity</label
+          >
+          <input
+            type="number"
+            name="quantity"
+            id="quantity"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="Quantity of books"
+            required
+            oninvalid="this.setCustomValidity('Please enter how many books do you want purchase')"
+            oninput="this.setCustomValidity('')"
+          />
+          <p id="quantityError" class="mt-2 mb-2 text-sm text-red-600">
+            Out of stock!
+          </p>
+        </div>
+      </div>
+      <button
+        id="confirmPurchase"
+        type="submit"
+        class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+      >
+        Purchase
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="/javascripts/purchase.js"></script>
+<script>
+  console.log(Number('<%=book.price[0].price%>'));
+
+  getBookData(
+    Number('<%=book.price[0].price%>'),
+    Number('<%=book.price[1].price%>'),
+    Number('<%=book.price[0].stock%>'),
+    Number('<%=book.price[1].stock%>')
+  );
+  quantityErrorFromServer('<%= quantityError%>');
+</script>
+<script src="/flowbite/dist/datepicker.js"></script>

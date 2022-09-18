@@ -1,0 +1,51 @@
+
+  <div class="flex flex-wrap overflow-hidden items-center justify-center">
+  <% for(var i=0; i<sales.length;i++) { -%>
+  <div class="m-4 bg-white rounded-lg shadow-md">
+    <img class="object-cover h-96 w-72 rounded-t-lg" src="/images/sales/<%- sales[i].coverPhoto -%>" alt="product image" />
+    <div class="px-5 pb-5 pt-2">
+      <h5 class="text-xl font-semibold tracking-tight text-gray-90"><%= sales[i].title%></h5>
+      <h5 class="text font-semibold tracking-tight text-gray-90">submitted by <%= sales[i].clientEmail%></h5>
+  
+      <div class="pt-5 ">
+      <% if(typeof userProfile != "undefined" && userProfile.role != "Client"){ %>
+        <a href="/book/showSale/<%= sales[i]._id%>" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">View More</a>
+      <% } %>
+      <% if(sales[i].status == "Pendent"){ %>
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-yellow-100 text-yellow-800"> <%= sales[i].status%> </span>
+      <% } else if(sales[i].status == "Accepted"){%>
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-green-100 text-green-800"> <%= sales[i].status%> </span>
+      <% } else {%>
+        <span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-red-100 text-red-800"> <%= sales[i].status%> </span>
+      <% }%>
+      </div>
+    </div>
+  </div>
+  <% } %>
+</div>
+<nav class="m-4 flex items-center justify-center" aria-label="Page navigation">
+  <ul class="inline-flex -space-x-px">
+    <li>
+      <a href="/book/listSales?page=1" class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700">First</a>
+    </li>
+    
+    <% firstValue = page-2 %>
+    <% firstValue = (firstValue>1) ? firstValue : 1 %>
+    <% lastValue = page + 2 %>
+    <% lastValue = (lastValue>totalPages) ? totalPages: lastValue  %>
+    
+    <% for(var i = firstValue; i<=lastValue; i++) { -%>
+    <li>
+      <a id="page<%= i %>" href="/book/listSales?page=<%= i %>" class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"><%= i %></a>
+    </li>
+    <% } %>
+    <li>
+      <a href="/book/listSales?page=<%= totalPages %>" class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700">Last</a>
+    </li>
+  </ul>
+</nav>
+<script src="/javascripts/list.js">
+</script>
+<script>
+  paginationSelect("page<%= page %>");
+</script>

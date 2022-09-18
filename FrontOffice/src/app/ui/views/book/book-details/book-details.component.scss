@@ -1,0 +1,7 @@
+.buttonPrice {
+  @apply relative block border border-gray-300 rounded-lg p-4 cursor-pointer focus:outline-none;
+}
+
+.buttonPriceActive {
+  @apply ring-2 ring-indigo-500;
+}

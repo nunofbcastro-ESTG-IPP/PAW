@@ -1,0 +1,141 @@
+<div
+  class="search-results"
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="50"
+  (scrolled)="onScroll()"
+>
+  <div class="p-4 flex items-center justify-center min-h-full">
+    <div class="md:w-2/4 w-full">
+      <div class="mb-10">
+        <div class="max-w-2xl mx-auto px-4 lg:max-w-4xl lg:px-0">
+          <h1
+            class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl"
+          >
+            Orders history
+          </h1>
+          <p class="mt-2 text-sm text-gray-500">
+            Check the status of recent orders, manage returns, and discover
+            similar products.
+          </p>
+        </div>
+      </div>
+      <div class="mb-2" *ngFor="let p of purchases; let i = index">
+        <p-panel [toggleable]="true" [collapsed]="true">
+          <ng-template pTemplate="header">
+            <dl
+              class="flex-1 grid grid-cols-2 text-sm sm:col-span-3 sm:grid-cols-3 lg:col-span-2"
+            >
+              <div>
+                <dt class="font-medium text-gray-900">Order code</dt>
+                <dd class="mt-1 text-gray-500">{{ p._id }}</dd>
+              </div>
+              <div class="hidden sm:block">
+                <dt class="font-medium text-gray-900">Date placed</dt>
+                <dd class="mt-1 text-gray-500">
+                  <time datetime="2021-07-06">{{
+                    covertDate(p.purchased_at)
+                  }}</time>
+                </dd>
+              </div>
+              <div>
+                <dt class="font-medium text-gray-900">Total amount</dt>
+                <dd class="mt-1 font-medium text-gray-900">
+                  {{ caseDecimals(p.totalPrice, 2) }}€
+                </dd>
+              </div>
+            </dl>
+          </ng-template>
+          <!--Body Content-->
+          <ul role="list" class="divide-y divide-gray-200">
+            <li class="p-4 sm:p-6" *ngFor="let b of p.books; let j = index">
+              <div class="flow-root px-4 sm:mt-5 sm:px-0">
+                <div class="-my-6 divide-y divide-gray-200 sm:-my-10">
+                  <div class="flex py-6 sm:py-10">
+                    <div class="min-w-0 flex-1 lg:flex lg:flex-col">
+                      <div class="lg:flex-1">
+                        <div class="sm:flex">
+                          <div class="flex-1 ml-6 text-sm">
+                            <div
+                              class="text-base font-medium text-gray-900 sm:flex sm:justify-between"
+                            >
+                              <h3>{{ b.title }}</h3>
+                              <p class="mt-2 sm:mt-0">
+                                {{
+                                  caseDecimals(b.unitaryPrice * b.quantity, 2)
+                                }}€
+                              </p>
+                            </div>
+                            <p
+                              class="hidden mt-1 text-sm text-gray-500 sm:block"
+                            >
+                              <b>Author:</b> Afonso Noite-Luar
+                            </p>
+                            <p
+                              class="hidden mt-1 text-sm text-gray-500 sm:block"
+                            >
+                              <b>Condition:</b> {{ b.state }}
+                            </p>
+                            <p
+                              class="hidden mt-1 text-sm text-gray-500 sm:block"
+                            >
+                              <b>Unitary Price:</b>
+                              {{ caseDecimals(b.unitaryPrice, 2) }}€
+                            </p>
+                            <p
+                              class="hidden mt-1 text-sm text-gray-500 sm:block"
+                            >
+                              <b>Quantity:</b> {{ b.quantity }}
+                            </p>
+                            <div
+                              class="mt-2 flex text-sm font-medium sm:mt-4 align-bottom"
+                            >
+                              <a
+                                class="text-indigo-600 hover:text-indigo-500"
+                                routerLink="/book/bookDetails/{{ b.bookId }}"
+                              >
+                                View Book</a
+                              >
+                              <!--<div
+                                class="border-l border-gray-200 ml-4 pl-4 sm:ml-6 sm:pl-6"
+                              >
+                                <a
+                                  href="#"
+                                  class="text-indigo-600 hover:text-indigo-500"
+                                  >Buy Again</a
+                                >
+                              </div>-->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="ml-4 flex-shrink-0 sm:m-0 sm:mr-6 sm:order-first"
+                    >
+                      <custom-img
+                        [src]="imageSrc + b.image"
+                        class="col-start-2 col-end-3 sm:col-start-1 sm:row-start-1 sm:row-span-2 w-20 h-20 rounded-lg object-center object-cover sm:w-40 sm:h-40 lg:w-40 lg:h-56"
+                      ></custom-img>
+                    </div>
+                  </div>
+
+                  <!-- More products... -->
+                </div>
+              </div>
+            </li>
+          </ul>
+        </p-panel>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex justify-center items-center" *ngIf="loading">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</div>

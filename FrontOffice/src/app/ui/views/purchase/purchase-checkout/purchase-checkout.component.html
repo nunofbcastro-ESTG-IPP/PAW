@@ -1,0 +1,28 @@
+<div *ngIf="!visibleLoading">
+  <ul class="mt-5 steps steps-horizontal justify-center w-full">
+    <li class="step" [ngClass]="{ 'step-primary': activated >= 0 }">
+      Shipping
+    </li>
+    <li class="step" [ngClass]="{ 'step-primary': activated >= 1 }">Review</li>
+    <li class="step" [ngClass]="{ 'step-primary': activated >= 2 }">Payment</li>
+  </ul>
+
+  <app-purshase-shipping
+    *ngIf="activated == 0"
+    (myEvent)="changeSteep($event)"
+  ></app-purshase-shipping>
+
+  <app-purshase-review
+    *ngIf="activated == 1"
+    (myEvent)="changeSteep($event)"
+  ></app-purshase-review>
+
+  <app-purshase-payment
+    *ngIf="activated == 2"
+    (myEvent)="changeSteep($event)"
+  ></app-purshase-payment>
+</div>
+
+<custom-loading-screen
+  [visibleLoading]="visibleLoading"
+></custom-loading-screen>

@@ -1,0 +1,148 @@
+<div
+  class="p-8 flex items-center justify-center min-h-full"
+  *ngIf="!visibleLoading"
+>
+  <div
+    class="rounded-lg items-center justify-center w-full md:mt-0 lg:flex xl:p-0 bg-white max-w-4xl"
+  >
+    <div class="p-6 w-full sm:p-8 lg:py-0 lg:px-16">
+      <div class="font-light text-xl leading-8 m-0 text-gray-600">
+        Regist Your Account
+      </div>
+
+      <div class="mt-8">
+        <div class="flex flex-col mb-2">
+          <div class="flex relative">
+            <span class="inputIcon">
+              <svg
+                width="15"
+                height="15"
+                fill="currentColor"
+                viewBox="0 0 1792 1792"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"
+                ></path>
+              </svg>
+            </span>
+            <input
+              type="text"
+              class="inputText"
+              placeholder="Your name (ex: João Faria)"
+              [(ngModel)]="name.value"
+              (ngModelChange)="nameDebounce.next($event)"
+            />
+          </div>
+          <p *ngIf="name.error" class="errorLabel">
+            {{ name.error }}
+          </p>
+        </div>
+
+        <div class="flex flex-col mb-2">
+          <div class="flex relative">
+            <span class="inputIcon">
+              <svg
+                width="15"
+                height="15"
+                fill="currentColor"
+                viewBox="0 0 1792 1792"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"
+                ></path>
+              </svg>
+            </span>
+            <input
+              type="email"
+              class="inputText"
+              placeholder="Your email (ex: joaofaria@gmail.com)"
+              [(ngModel)]="email.value"
+              (ngModelChange)="emailDebounce.next($event)"
+            />
+          </div>
+          <p *ngIf="email.error" class="errorLabel">
+            {{ email.error }}
+          </p>
+        </div>
+
+        <div class="flex flex-col mb-2">
+          <div class="flex relative">
+            <span class="inputIcon">
+              <svg
+                width="15"
+                height="15"
+                fill="currentColor"
+                viewBox="0 0 1792 1792"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1376 768q40 0 68 28t28 68v576q0 40-28 68t-68 28h-960q-40 0-68-28t-28-68v-576q0-40 28-68t68-28h32v-320q0-185 131.5-316.5t316.5-131.5 316.5 131.5 131.5 316.5q0 26-19 45t-45 19h-64q-26 0-45-19t-19-45q0-106-75-181t-181-75-181 75-75 181v320h736z"
+                ></path>
+              </svg>
+            </span>
+
+            <input
+              type="password"
+              class="inputText"
+              placeholder="Password"
+              [(ngModel)]="password.value"
+              (ngModelChange)="passwordDebounce.next($event)"
+            />
+          </div>
+          <p *ngIf="password.error" class="errorLabel">
+            {{ password.error }}
+          </p>
+        </div>
+
+        <div class="flex flex-col mb-6">
+          <div class="flex relative">
+            <span class="inputIcon">
+              <svg
+                width="15"
+                height="15"
+                fill="currentColor"
+                viewBox="0 0 1792 1792"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"
+                ></path>
+              </svg>
+            </span>
+            <input
+              type="date"
+              class="inputText"
+              placeholder="dd-mm-yyyy"
+              [(ngModel)]="dateBirthday.value"
+              (ngModelChange)="dateBirthdayDebounce.next($event)"
+            />
+          </div>
+          <p *ngIf="dateBirthday.error" class="errorLabel">
+            {{ dateBirthday.error }}
+          </p>
+        </div>
+
+        <p *ngIf="error" class="errorLabel">
+          {{ error }}
+        </p>
+
+        <div class="flex w-full">
+          <button (click)="register()" class="button w-full">Sign Up</button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <img
+        class="rounded-r-lg h-150 w-200 object-cover hidden lg:block"
+        src="/assets/images/books.jpg"
+        alt="login image"
+      />
+    </div>
+  </div>
+</div>
+
+<custom-loading-screen
+  [visibleLoading]="visibleLoading"
+></custom-loading-screen>
