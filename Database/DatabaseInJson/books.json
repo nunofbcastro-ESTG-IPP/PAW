@@ -1,0 +1,722 @@
+[{
+  "_id": {
+    "$oid": "62a8a69c179d97be20ddf022"
+  },
+  "isbn": "9789899087255",
+  "title": "Eu Já Devia Saber",
+  "descrition": "Manu está no segundo ano da faculdade e mal pode esperar por ir viver para Lisboa. Além da melhor amiga, Camila, e do irmão por afinidade, Fred, a única pessoa capaz de a tirar do tédio em que vive é o Edu. Mas não está fácil: se há palavra para descrevê-lo é «misterioso»... Alguém conhece um tutorial no YouTube para lidar com isto?\r\n\r\nO Edu parece perfeito: é inteligente, bonito e carinhoso. Mas e se não for a pessoa certa para a Manu? E se houver outra pessoa capaz de lhe roubar o coração, alguém que esteve sempre por perto e que ela nunca foi capaz de ver de outra forma? E se… e se ela se apaixonar pela única pessoa do mundo que não pode amar?\r\n\r\nNum romance de estreia emocionante, envolvente e cheio de reviravoltas, Bárbara Corby traz-nos uma história de amor que surge onde ninguém esperava. Só que à medida que este amor se torna mais forte, verdadeiro e intenso, mais claro é para todos que simplesmente não pode acontecer.",
+  "author": "Bárbara Corby",
+  "number_of_pages": 208,
+  "publishers": "Manuscrito Editora",
+  "publishDate": "05/10/2022",
+  "lang": "pt",
+  "price": [
+    {
+      "state": "new",
+      "price": {
+        "$numberDecimal": "15"
+      },
+      "stock": 15,
+      "_id": {
+        "$oid": "62a8a69c179d97be20ddf023"
+      }
+    },
+    {
+      "state": "old",
+      "price": {
+        "$numberDecimal": "10"
+      },
+      "stock": 5,
+      "_id": {
+        "$oid": "62a8a69c179d97be20ddf024"
+      }
+    }
+  ],
+  "image": "1655219868178-558978242.jpg",
+  "state": "Active",
+  "review": [
+    {
+      "clientId": {
+        "$oid": "626f109cc4bb37116bc6fdce"
+      },
+      "clientName": "Client",
+      "clientEmail": "client@gmail.com",
+      "clientImage": "default_image.png",
+      "review": "asdasd",
+      "rating": 1,
+      "_id": {
+        "$oid": "62a8bfc34a62f654b730cf73"
+      }
+    },
+    {
+      "clientId": {
+        "$oid": "626f1049c4bb37116bc6fdbb"
+      },
+      "clientName": "Admin",
+      "clientEmail": "admin@gmail.com",
+      "clientImage": "default_image.png",
+      "review": "Eu já devia saber... ",
+      "rating": 1,
+      "_id": {
+        "$oid": "62a916a87eae769ed3664b3f"
+      }
+    },
+    {
+      "clientId": {
+        "$oid": "626f109cc4bb37116bc6fdce"
+      },
+      "clientName": "Client",
+      "clientEmail": "client@gmail.com",
+      "clientImage": "default_image.png",
+      "review": "Melhor livro do mundo",
+      "rating": 5,
+      "_id": {
+        "$oid": "62a9e058cf77c859cd8e9211"
+      }
+    },
+    {
+      "clientId": {
+        "$oid": "626f109cc4bb37116bc6fdce"
+      },
+      "clientName": "Client",
+      "clientEmail": "client@gmail.com",
+      "clientImage": "default_image.png",
+      "review": "Melhor livro do mundo",
+      "rating": 5,
+      "_id": {
+        "$oid": "62a9e059cf77c859cd8e9215"
+      }
+    },
+    {
+      "clientId": {
+        "$oid": "626f1049c4bb37116bc6fdbb"
+      },
+      "clientName": "Admin",
+      "clientEmail": "admin@gmail.com",
+      "clientImage": "default_image.png",
+      "review": "comentário",
+      "rating": 5,
+      "_id": {
+        "$oid": "62bf056c079ae7f505f11b62"
+      }
+    }
+  ],
+  "updated_at": {
+    "$date": {
+      "$numberLong": "1655219868227"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a8a72e179d97be20ddf03b"
+  },
+  "isbn": "9789722074346",
+  "title": "A Mais Breve História da Rússia",
+  "descrition": "Nação de proporções colossais ou continente? Luz do mundo ou terra condenada? Aliado da Europa e do Ocidente ou seu adversário mortal? Território de santos, czares, poetas, pintores, revolucionários e músicos, a Rússia é um enorme mistério que importa desvendar. Esconde uma história tão rica, antiga e diversa quanto desconhecida.\r\n\r\nJosé Milhazes, o grande especialista português da Rússia, propõe neste livro uma viagem fascinante que atravessa séculos e séculos da história, cultura e civilização russas, que começa nos povos eslavos vários séculos antes de Cristo e acaba na actualidade, com Putin.\r\n\r\nNesta edição que inclui dezenas de fotografias e mapas - além de uma cronologia e de bibliografia aconselhada para quem quiser saber mais - fique a conhecer a geografia, os povos, as grandes figuras, efemérides e feitos desta grande nação em permanente devir.",
+  "author": "José Milhazes",
+  "number_of_pages": 296,
+  "publishers": "Dom Quixote",
+  "publishDate": "02/25/2022",
+  "lang": "pt",
+  "price": [
+    {
+      "state": "new",
+      "price": {
+        "$numberDecimal": "19"
+      },
+      "stock": 4,
+      "_id": {
+        "$oid": "62a8a737179d97be20ddf046"
+      }
+    },
+    {
+      "state": "old",
+      "price": {
+        "$numberDecimal": "15"
+      },
+      "stock": 10,
+      "_id": {
+        "$oid": "62a8a737179d97be20ddf047"
+      }
+    }
+  ],
+  "image": "1655220023292-500404261.jpg",
+  "state": "Active",
+  "review": [],
+  "updated_at": {
+    "$date": {
+      "$numberLong": "1655220014857"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a8a78b179d97be20ddf051"
+  },
+  "isbn": "9780544003415",
+  "title": "The lord of the rings",
+  "descrition": "An extraordinary work -- pure excitement.\" -- New York Times Book Review One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them\r\n\r\nIn ancient times the Rings of Power were crafted by the Elven-smiths, and Sauron, the Dark Lord, forged the One Ring, filling it with his own power so that he could rule all others. But the One Ring was taken from him, and though he sought it throughout Middle-earth, it remained lost to him. After many ages it fell by chance into the hands of the hobbit Bilbo Baggins.\r\n\r\nFrom Sauron's fastness in the Dark Tower of Mordor, his power spread far and wide. Sauron gathered all the Great Rings, but always he searched for the One Ring that would complete his dominion.\r\n\r\nWhen Bilbo reached his eleventy-first birthday he disappeared, bequeathing to his young cousin Frodo the Ruling Ring and a perilous quest: to journey across Middle-earth, deep into the shadow of the Dark Lord, and destroy the Ring by casting it into the Cracks of Doom.\r\n\r\nThe Lord of the Rings tells of the great quest undertaken by Frodo and the Fellowship of the Ring: Gandalf the Wizard; the hobbits Merry, Pippin, and Sam; Gimli the Dwarf; Legolas the Elf; Boromir of Gondor; and a tall, mysterious stranger called Strider.",
+  "author": "J. R. R. Tolkien",
+  "number_of_pages": 1216,
+  "publishers": "Houghton Mifflin",
+  "publishDate": "1/1/2012",
+  "lang": "en",
+  "price": [
+    {
+      "state": "new",
+      "price": {
+        "$numberDecimal": "13"
+      },
+      "stock": 5,
+      "_id": {
+        "$oid": "62a8a78b179d97be20ddf052"
+      }
+    },
+    {
+      "state": "old",
+      "price": {
+        "$numberDecimal": "8"
+      },
+      "stock": 10,
+      "_id": {
+        "$oid": "62a8a78b179d97be20ddf053"
+      }
+    }
+  ],
+  "image": "1655220107299-717577593.jpg",
+  "state": "Active",
+  "review": [],
+  "updated_at": {
+    "$date": {
+      "$numberLong": "1655220107351"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a8a849179d97be20ddf063"
+  },
+  "isbn": "9781519310408",
+  "title": "Peter and Wendy",
+  "descrition": "Peter pan, the mischievous boy who refuses to grow up, lands in the Darling’s proper middle-class home to look for his shadow. He befriends Wendy, John and Michael and teaches them to fly (with a little help from fairy dust). He and Tinker Bell whisk them off to Never-land where they encounter the Red Indians, the Little Lost Boys, pirates and the dastardly Captain Hook. Unlike the boiled-down, sugarcoated contemporary versions of Peter Pan, the original classic by Barrie is not only magical but witty, sophisticated and delightfully odd. Includes unique illustrations",
+  "author": "J. M. Barrie",
+  "number_of_pages": 138,
+  "publishers": "CreateSpace Independent Publishing Platform",
+  "publishDate": "10/15/2015",
+  "lang": "en",
+  "price": [
+    {
+      "state": "new",
+      "price": {
+        "$numberDecimal": "10"
+      },
+      "stock": 2,
+      "_id": {
+        "$oid": "62a8a849179d97be20ddf064"
+      }
+    },
+    {
+      "state": "old",
+      "price": {
+        "$numberDecimal": "6"
+      },
+      "stock": 4,
+      "_id": {
+        "$oid": "62a8a849179d97be20ddf065"
+      }
+    }
+  ],
+  "image": "1655220297816-681975398.jpg",
+  "state": "Active",
+  "review": [],
+  "updated_at": {
+    "$date": {
+      "$numberLong": "1655220297858"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a8a8e3179d97be20ddf074"
+  },
+  "isbn": "9789899087279",
+  "title": "O Livro do Ric",
+  "descrition": "Olá, pinguim! Daqui Riiiiiiiiiic Fazeres, diretamente do YouTube para o livro que tens agora nas tuas mãos. Pois é, Zezoca, estou muito feliz: a minha história é a prova de que os sonhos podem mesmo tornar-se realidade, e só te posso agradecer por todo o apoio. Já agora… Tudo bem contigo, ou não queres dizer ao Zé Ric?\r\n\r\nPuxa uma cadeira, senta-te confortavelmente e manda vir uns croquetes: escrevi este livro para te contar a minha história, desde a infância no Zaire até largar tudo para criar o canal. Também te quero revelar a verdade sobre ser youtuber, dar-te alguns conselhos e garantir que te divertes muuuuuuito com curiosidades malucas sobre jogos, quizes incríveis e o vídeo secreto que preparei para ti.\r\n\r\nVamos a isso, Zezoca?",
+  "author": "RicFazeres ",
+  "number_of_pages": 176,
+  "publishers": "Manuscrito Editora",
+  "publishDate": "06/04/2022",
+  "lang": "pt",
+  "price": [
+    {
+      "state": "new",
+      "price": {
+        "$numberDecimal": "15"
+      },
+      "stock": 14,
+      "_id": {
+        "$oid": "62a8a8e3179d97be20ddf075"
+      }
+    },
+    {
+      "state": "old",
+      "price": {
+        "$numberDecimal": "12"
+      },
+      "stock": 0,
+      "_id": {
+        "$oid": "62a8a8e3179d97be20ddf076"
+      }
+    }
+  ],
+  "image": "1655220451151-204035813.jpg",
+  "state": "Active",
+  "review": [],
+  "updated_at": {
+    "$date": {
+      "$numberLong": "1655220451195"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a8ab7a4700c1498127eefa"
+  },
+  "isbn": "9789896661397",
+  "title": "Sentir",
+  "descrition": "Sentir, de Cristina Ferreira, é um inspirador livro de memórias a que ninguém fica indiferente.\r\nCheio de revelações, tocado pela surpreendente magia da sua escrita, mostra o percurso de trabalho e sacrifício de Cristina na busca determinada pela realização de um sonho.\r\n\r\nO passado não guarda só as memórias. É nele que se inscrevem as histórias que nos moldam e nos transformam. A sorte de uma família perfeita faz o resto. Muitos me perguntam como consigo, qual o segredo do meu sucesso. Talvez aqui encontrem respostas. Este livro é uma partilha muito pessoal dos meus momentos, do que fez a diferença na minha vida. Não é um romance, mas está cheio de amor. E também de algum desamor. As imagens tornam-se aliadas de uma memória que me foi passada ou que vivi. Não sou mais do que gente normal à procura do sonho. Nunca tive a pretensão da escrita, mas encontro nas palavras uma forma de me revelar. Cabe a cada leitor encontrar os seus momentos-chave. E neles descobrirá a sua chave do sucesso.",
+  "author": "Cristina Ferreira ",
+  "number_of_pages": 200,
+  "publishers": "Contraponto Editores",
+  "publishDate": "01/19/2021",
+  "lang": "pt",
+  "price": [
+    {
+      "state": "new",
+      "price": {
+        "$numberDecimal": "17"
+      },
+      "stock": 10,
+      "_id": {
+        "$oid": "62a8ab7a4700c1498127eefb"
+      }
+    },
+    {
+      "state": "old",
+      "price": {
+        "$numberDecimal": "13"
+      },
+      "stock": 10,
+      "_id": {
+        "$oid": "62a8ab7a4700c1498127eefc"
+      }
+    }
+  ],
+  "image": "1655221114510-770949867.jpg",
+  "state": "Active",
+  "review": [],
+  "updated_at": {
+    "$date": {
+      "$numberLong": "1655221114557"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a8ac2c4700c1498127ef2e"
+  },
+  "isbn": "9789896661731",
+  "title": "O Homem Que Sou",
+  "descrition": "O Homem Que Sou partilha as recordações do menino que cresceu num casebre sem água canalizada nem eletricidade e que, como todos na sua aldeia, incluindo o próprio pai, emigrou para ganhar a vida, sem nunca desistir do sonho de ser cantor.\r\n\r\nPor estas páginas passam as histórias mais desencantadas e fracassos mais profundos do operário fabril em França que, nos tempos livres, lutava para se tornar um músico a tempo inteiro. Mesmo quando lhe deram zero pontos numa semifinal do Festival da Canção, mesmo quando duvidaram da sua capacidade de encher o Coliseu dos Recreios, em Lisboa, Tony Carreira continuou a acreditar. Por isso, vive cada sucesso como uma vitória sobre as circunstâncias.\r\n\r\nEste é o livro do homem que conseguiu tornar-se músico, que cantou com Lara Fabian ou Toto Cutugno, do artista que mais vezes tocou no Pavilhão Atlântico, que tem mais de sessenta discos de platina e de ouro, e que foi agraciado pelo governo francês ou pelos World Music Awards.\r\n\r\nNum relato de grande honestidade, sobressaem o amor à família, a devoção à beleza e à força das mulheres, as contradições e as fragilidades, o medo de envelhecer ou de andar de avião, as comoventes histórias comuns a tantos portugueses obrigados a tentar a sorte no estrangeiro; bem como os episódios caricatos com fãs, ou algumas revelações supreendentes, como o momento em que recorreu à bebida para ultrapassar a morte de amigos, ou as visitas noturnas ao Santuário de Fátima.\r\nA confissão de um homem inteiro, corajoso e surpreendente.",
+  "author": "Tony Carreira",
+  "number_of_pages": 224,
+  "publishers": "Edições Contraponto",
+  "publishDate": "6/14/2018",
+  "lang": "pt",
+  "price": [
+    {
+      "state": "new",
+      "price": {
+        "$numberDecimal": "16"
+      },
+      "stock": 3,
+      "_id": {
+        "$oid": "62a8ac2c4700c1498127ef2f"
+      }
+    },
+    {
+      "state": "old",
+      "price": {
+        "$numberDecimal": "11"
+      },
+      "stock": 0,
+      "_id": {
+        "$oid": "62a8ac2c4700c1498127ef30"
+      }
+    }
+  ],
+  "image": "1655221292319-256376787.jpg",
+  "state": "Active",
+  "review": [
+    {
+      "clientId": {
+        "$oid": "626f1049c4bb37116bc6fdbb"
+      },
+      "clientName": "Admin",
+      "clientEmail": "admin@gmail.com",
+      "clientImage": "default_image.png",
+      "review": "Muito bom livro adorei",
+      "rating": 5,
+      "_id": {
+        "$oid": "62a8da0680e099b3f803aa48"
+      }
+    },
+    {
+      "clientId": {
+        "$oid": "626f1049c4bb37116bc6fdbb"
+      },
+      "clientName": "Admin",
+      "clientEmail": "admin@gmail.com",
+      "clientImage": "default_image.png",
+      "review": "Estou a adorar ler este livro! Que homem!",
+      "rating": 4,
+      "_id": {
+        "$oid": "62a8daac80e099b3f803aa56"
+      }
+    },
+    {
+      "clientId": {
+        "$oid": "626f1049c4bb37116bc6fdbb"
+      },
+      "clientName": "Admin",
+      "clientEmail": "admin@gmail.com",
+      "clientImage": "default_image.png",
+      "review": "Gosto muito do Tony e ainda mais do livro, que história emocionante!",
+      "rating": 5,
+      "_id": {
+        "$oid": "62a8e5d180e099b3f803aace"
+      }
+    },
+    {
+      "clientId": {
+        "$oid": "626f109cc4bb37116bc6fdce"
+      },
+      "clientName": "Client",
+      "clientEmail": "client@gmail.com",
+      "clientImage": "default_image.png",
+      "review": "Muito bom",
+      "rating": 5,
+      "_id": {
+        "$oid": "62a9dd6f1d56ac5eda3d7c1f"
+      }
+    }
+  ],
+  "updated_at": {
+    "$date": {
+      "$numberLong": "1655221292363"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a8b647c427cb266b12eec5"
+  },
+  "isbn": "9789897845970",
+  "title": "A Noite é um Jogo",
+  "descrition": "Quatro amigos\r\nLiv, Martina, Max e Anton são melhores amigos há anos. Na véspera de Ano Novo, estão mais do que felizes por passar a noite juntos - a beber, a namoriscar e a jogar.\r\n\r\nQuatro segredos aterrorizantes\r\nMas cada um deles guarda um terrível segredo. E, quando um jogo de verdade ou consequência toma um rumo sombrio, não demora muito a emergir uma verdade chocante.\r\n\r\nUma noite que terminará em assassinato\r\nAgora, os segredos já não o são. Nada mais será o mesmo. E nem todos viverão para ver chegar o novo ano…",
+  "author": "Camilla Läckberg ",
+  "number_of_pages": 136,
+  "publishers": "Suma de Letras",
+  "publishDate": "06/22/2022",
+  "lang": "pt",
+  "price": [
+    {
+      "state": "new",
+      "price": {
+        "$numberDecimal": "15"
+      },
+      "stock": 5,
+      "_id": {
+        "$oid": "62a8b647c427cb266b12eec6"
+      }
+    },
+    {
+      "state": "old",
+      "price": {
+        "$numberDecimal": "9"
+      },
+      "stock": 2,
+      "_id": {
+        "$oid": "62a8b647c427cb266b12eec7"
+      }
+    }
+  ],
+  "image": "1655223879163-393457941.jpg",
+  "state": "Active",
+  "review": [],
+  "updated_at": {
+    "$date": {
+      "$numberLong": "1655223879212"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a8b6ecc427cb266b12eed2"
+  },
+  "isbn": "9789727228607",
+  "title": "NODE.JS",
+  "descrition": "Nos últimos anos, o Node.js (ou simplesmente Node, como é conhecido por muitos dos seus fãs) tem ganhado cada vez mais popularidade e peso na comunidade de programação.\r\n\r\nEsta plataforma dirigida por eventos Input/Output (I/O) recorre ao motor de JavaScript V8 para permitir a escrita de aplicações em JavaScript. Os princípios sobre os quais assenta (acessos I/O assíncronos, suporte predefinido para os protocolos mais importantes e utilização de streams) foram fundamentais para garantir a sua crescente utilização no desenvolvimento de aplicações e utilitários.\r\n\r\nPara além de disponibilizar vários módulos core que podem ser utilizados na criação de aplicações, a plataforma goza ainda de um vasto repositório de pacotes gratuitos públicos que simplificam a construção de aplicações Web. Assim, concentra-se na apresentação das principais caraterísticas e funcionalidades disponibilizadas por este ecossistema Node.js, com especial ênfase na construção de aplicações Web.\r\n\r\nEste livro parte do princípio de que o leitor já possui alguns conhecimentos sobre JavaScript, pelo que não efetua nenhuma introdução à linguagem.\r\n\r\nAo longo do livro são abordados, entre outros, os seguintes temas:\r\n· O que é o Node.js;\r\n· Módulos e pacotes em Node.js;\r\n· Express;\r\n· Motores de templates;\r\n· Utilitários Bower e Grunt;\r\n· Interação com bases de dados;\r\n· Aplicações SPA;\r\n· Autenticação e autorização;\r\n· Utilização de sockets.",
+  "author": "Luís Abreu",
+  "number_of_pages": 216,
+  "publishers": "FCA",
+  "publishDate": "06/08/2016",
+  "lang": "pt",
+  "price": [
+    {
+      "state": "new",
+      "price": {
+        "$numberDecimal": "20"
+      },
+      "stock": 9,
+      "_id": {
+        "$oid": "62a8b6ecc427cb266b12eed3"
+      }
+    },
+    {
+      "state": "old",
+      "price": {
+        "$numberDecimal": "10"
+      },
+      "stock": 5,
+      "_id": {
+        "$oid": "62a8b6ecc427cb266b12eed4"
+      }
+    }
+  ],
+  "image": "1655224044705-27003498.jpg",
+  "state": "Active",
+  "review": [],
+  "updated_at": {
+    "$date": {
+      "$numberLong": "1655224044752"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a8b80ec427cb266b12eee8"
+  },
+  "isbn": "9780747599630",
+  "title": "Spanish Gold",
+  "descrition": "Stories of individual pirates in the Caribbean, from Blackbeard to Calico Jack, have been the stuff of legend since the eighteenth century, but in Spanish Gold pirate expert David Cordingly at last gives us the big picture in all its bold and ruthless truth. Cordingly shows how the attacks of the buccaneers on the treasure ports of the Spanish Main, and the sacking of Panama by Sir Henry Morgan in 1671, were the prologue to an explosion of piracy which led to the establishment of a pirate colony at Nassau in the Bahamas. By 1717, so many ships had been raided and trade so badly disrupted that the merchants of London had to act. The man they selected 'to drive the pirates from their lodgement' was Captain Woodes Rogers, himself a former privateer who had sailed round the world with William Dampier the buccaneer explorer as his pilot. Woodes Rogers had captured the fabled Manila treasure galleon, and rescued Alexander Selkirk from a remote Pacific island - indeed, it was his account of Selkirk's ordeal that inspired Daniel Defoe's Robinson Crusoe. Woodes Rogers' resolute actions as Governor of the Bahamas restored order to the colony and proved a defining step in the campaign against the pirates, inspiring the fight-back against men like Blackbeard, Calico Jack and Bartholomew Roberts, all of whom died in dramatic circumstances. Played out against the background of fierce colonial rivalry between Britain, France and Spain, linked with the slave trade, the sugar plantations of the West Indies, and the fabulously rich trade in gold and silver from the New World, the true story of the rise and fall of the pirates of the Caribbean makes for a tale even more interesting and surprising than the legends themselves.",
+  "author": "David Cordingly",
+  "number_of_pages": 320,
+  "publishers": "Bloomsbury UK",
+  "publishDate": "4/1/2011",
+  "lang": "en",
+  "price": [
+    {
+      "state": "new",
+      "price": {
+        "$numberDecimal": "40"
+      },
+      "stock": 5,
+      "_id": {
+        "$oid": "62a8b80ec427cb266b12eee9"
+      }
+    },
+    {
+      "state": "old",
+      "price": {
+        "$numberDecimal": "20"
+      },
+      "stock": 0,
+      "_id": {
+        "$oid": "62a8b80ec427cb266b12eeea"
+      }
+    }
+  ],
+  "image": "1655224334878-621171545.jpg",
+  "state": "Active",
+  "review": [],
+  "updated_at": {
+    "$date": {
+      "$numberLong": "1655224334921"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a8b88dc427cb266b12eef2"
+  },
+  "isbn": "9781492632153",
+  "title": "Did I Mention I Need You?",
+  "descrition": "While spending the summer with her father and his new family in Santa Monica, Eden Munro faces many new experiences and finds herself falling for the one person she should not--her stepbrother, Tyler.",
+  "author": "Estelle Maskame",
+  "number_of_pages": 393,
+  "publishers": "Sourcebooks",
+  "publishDate": "1/1/2015",
+  "lang": "en",
+  "price": [
+    {
+      "state": "new",
+      "price": {
+        "$numberDecimal": "10"
+      },
+      "stock": 5,
+      "_id": {
+        "$oid": "62a8b88dc427cb266b12eef3"
+      }
+    },
+    {
+      "state": "old",
+      "price": {
+        "$numberDecimal": "5"
+      },
+      "stock": 2,
+      "_id": {
+        "$oid": "62a8b88dc427cb266b12eef4"
+      }
+    }
+  ],
+  "image": "1655224461862-571837596.jpg",
+  "state": "Active",
+  "review": [],
+  "updated_at": {
+    "$date": {
+      "$numberLong": "1655224461912"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a8c39d4a62f654b730d000"
+  },
+  "isbn": "9789896663490",
+  "title": "Apontar é Feio",
+  "descrition": "«A humorista mais querida dos portugueses», disse ninguém nunca sobre ela. Autora de uma rubrica de rádio de referência, que é também o podcast mais ouvido em Portugal, o Extremamente Desagradável, colunista da Visão, guionista do programa Isto é Gozar com Quem Trabalha e a jurada menos habilitada do programa de televisão Ídolos, Joana Marques partilha agora o seu bloco de notas com toda a gente.\r\n\r\nApontar é Feio trata-se de um caderno com apontamentos que obedece à estratégia que Joana Marques sempre usou para tomar notas na escola: enquanto lá à frente o professor dava a matéria, ela ia escrevendo sobre assuntos irrelevantes. Em dias bons, porque nos outros fazia só um jogo do galo contra ela própria (e às vezes perdia).\r\n\r\nNestas páginas, reflecte sobre temas tão importantes como compostagem humana, queijo comido às escondidas dos filhos, juízes sem juízo nenhum, sintomatologia do mau perder, neologismos das Spice Girls, festas da espuma, veados em Odivelas, o Ranger do Texas, um divórcio provocado por bananas, pijaminhas de sobremesas, viagens a Bali, lançamento de búzios, alinhamento de chakras ou a importância dos cheeseburgers no sucesso de Cristiano Ronaldo.",
+  "author": "Joana Marques ",
+  "number_of_pages": 208,
+  "publishers": "Contraponto Editores",
+  "publishDate": "06/09/2022",
+  "lang": "pt",
+  "price": [
+    {
+      "state": "new",
+      "price": {
+        "$numberDecimal": "17"
+      },
+      "stock": 5,
+      "_id": {
+        "$oid": "62a8c39d4a62f654b730d001"
+      }
+    },
+    {
+      "state": "old",
+      "price": {
+        "$numberDecimal": "10"
+      },
+      "stock": 0,
+      "_id": {
+        "$oid": "62a8c39d4a62f654b730d002"
+      }
+    }
+  ],
+  "image": "1655227293491-632221359.jpg",
+  "state": "Active",
+  "review": [],
+  "updated_at": {
+    "$date": {
+      "$numberLong": "1655227293539"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a8c4964a62f654b730d01d"
+  },
+  "isbn": "9789893332719",
+  "title": "Na Cabeça de Putin",
+  "descrition": "Ninguém ousará fazer passar Vladimir Putin por um intelectual. E, no entanto, o antigo espião que tomou as rédeas do maior arsenal nuclear do mundo gosta de citar filósofos em alguns dos seus discursos. O seu desejo de deixar marca na história bebe influências e ideias de origens diversas e por vezes até contraditórias: da herança soviética com pretensões de ordem científica ao pensamento reaccionário dos arautos de um imperialismo russo. Por entre este mar de referências, Putin, como este livro demonstra, pode ser lido como uma sinistra personagem de Dostoiévski.",
+  "author": "Michel Eltchaninoff ",
+  "number_of_pages": 160,
+  "publishers": "Livros Zigurate",
+  "publishDate": "06/08/2022",
+  "lang": "pt",
+  "price": [
+    {
+      "state": "new",
+      "price": {
+        "$numberDecimal": "18"
+      },
+      "stock": 5,
+      "_id": {
+        "$oid": "62a8c4964a62f654b730d01e"
+      }
+    },
+    {
+      "state": "old",
+      "price": {
+        "$numberDecimal": "15"
+      },
+      "stock": 0,
+      "_id": {
+        "$oid": "62a8c4964a62f654b730d01f"
+      }
+    }
+  ],
+  "image": "1655227541961-294580520.jpg",
+  "state": "Active",
+  "review": [],
+  "updated_at": {
+    "$date": {
+      "$numberLong": "1655227542005"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62a8c57a4a62f654b730d054"
+  },
+  "isbn": "9781786467362",
+  "title": "Angularjs",
+  "descrition": "Get started with speed building AngularJS applications, and scale up to a full-stack web application, using the existing AngularJS framework without the trouble of migrating to Angular 2About This BookFollow the best practices of the framework to organize and modularize your applicationGet to grips with Angular's Model-View-Controller architectureCreate application modules with maximum reusability and extensibilityStructure and use AngularJS applications in your MEAN project in your MEAN projectWho This Book Is ForThis course is for people who want to discover how they can improve their current web applications with the existing version of Angular without having to worry much about migrating to AngularJS 2What You Will LearnInstall and set up the AngularJS frameworkCreate your own full-featured and robust AngularJS web appsCreate reusable directives and then extend the behavior of HTML on your web pageOptimize and maintain your web applicationsCreate more powerful full-stack web applications, that draw on the combined power of AngularJS, Node.js, MongoDB, and Express in the MEAN stackIn DetailThe AngularJS course is a journey to help you improve and scale your current web applications with the existing version of Angular without having to worry about migration to Angular 2. The course is divided into four modules.The first part-AngularJS Essentials is like a practical guide, filled with many step-by-step examples that will lead you through the best practices of AngularJS. After a brief introduction, you will learn how to create reusable components with directives. You will then take a look at many data handling techniques, discover a complete set of technologies that are capable to accomplish any challenge related to present, transform, and validate data on the user's interface. Finally, you will discover the best way to deal with the scope and how to break up the application into separate modules, giving rise to reusable and interchangeable libraries.With this you've crossed a milestone and are about to enter the world of learning by example. In the next part-Learning AngularJS By Example, you will learn how to effectively build apps using the AngularJS platform. You will be building multiple apps on this platform ranging from simple ones to more complex ones. In this module, you will roll up your coding sleeves and create a serious AngularJS application by example - a rich featured workout app. Take the coding a step at a time at first, then once you're coding a full app in this module, a lot of AngularJS will fall right into place for you.The third module-AngularJS Web Application Development Cookbook, will get you accustomed to the AngularJS concept armed with a solid understanding of how it works, insight into the best ways to wield it in real-world applications, and annotated code examples. It is a rich library of AngularJS coding solutions that you can use straight away in your own code projects.You are just a step away from completing this learning path of AngularJS. The name of the next part-MEAN Web Development itself assures that you are nearing the destination. The idea is simple with this part, you'll take MongoDB as the database, Express as the web framework, AngularJS as the frontend framework, and Node.js as the platform, and combine them together in a modular approach that will ensure the flexibility needed in modern software development. This is also your graduation to full-stack web development, which can open many new coding and career opportunities for you!Style and approachGet up to speed building AngularJS applications, then improve and scale full-stack web applications, using the existing AngularJS framework without the trouble of migrating to Angular 2",
+  "author": "Rodrigo Branas",
+  "number_of_pages": 1010,
+  "publishers": "PACKT PUBLISHING",
+  "publishDate": "04/21/2016",
+  "lang": "en",
+  "price": [
+    {
+      "state": "new",
+      "price": {
+        "$numberDecimal": "52"
+      },
+      "stock": 9,
+      "_id": {
+        "$oid": "62a8c57a4a62f654b730d055"
+      }
+    },
+    {
+      "state": "old",
+      "price": {
+        "$numberDecimal": "30"
+      },
+      "stock": 5,
+      "_id": {
+        "$oid": "62a8c57a4a62f654b730d056"
+      }
+    }
+  ],
+  "image": "1655227770207-566711492.jpg",
+  "state": "Active",
+  "review": [],
+  "updated_at": {
+    "$date": {
+      "$numberLong": "1655227770252"
+    }
+  },
+  "__v": 0
+}]

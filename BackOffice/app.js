@@ -14,8 +14,14 @@ var swaggerDocument = require('./swagger.json');
 
 mongoose.Promise = global.Promise;
 
+mongoose.set('strictQuery', false);
 mongoose
-  .connect(process.env.DB, { useNewUrlParser: true })
+  .connect(process.env.DB, {
+    authSource: process.env.DB_AuthSource,
+    user: process.env.DB_User,
+    pass: process.env.DB_Password,
+    useNewUrlParser: true,
+  })
   .then(() => console.log('connection succesful'))
   .catch((err) => console.error(err));
 

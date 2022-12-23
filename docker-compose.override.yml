@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  mongodb:
+    ports:
+      - 27018:27017
+  backoffice:
+    ports:
+      - 3000:3000
+  frontoffice:
+    ports:
+      - 4200:4200

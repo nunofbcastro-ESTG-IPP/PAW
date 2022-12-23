@@ -21,8 +21,56 @@
 <h2>How to run</h2>
 
 ```
+git clone https://github.com/nunofbcastro-ESTG-IPP/PAW.git
+cd PAW
+```
 
+Before executing it, you have to change the STRIPE_SK, email and emailPassword values in the BackOffice/.env file and the stripe_pk value in the FrontOffice/src/environments/environment.ts file
 
+Nota:
+
+- [Stripe](https://stripe.com/docs/keys)
+- [Email](https://outlook.live.com/owa/)
+
+```
+docker compose up
+```
+
+For the execution to be complete, the execution of BackOffice and FrontOffice must be complete.
+
+The execution of BackOffice is finished when the following message appears:
+
+```
+ ** Angular Live Development Server is listening on 0.0.0.0:4200, open your browser on http://localhost:4200/ **
+✔ Compiled successfully.
+```
+
+The execution of FrontOffice is finished when the following message appears:
+
+```
+[nodemon] 2.0.20
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+connection succesful
+```
+
+---
+
+<h2>Users already created</h2>
+
+```
+admin@gmail.com:Admin123
+employee@gmail.com:Employee123
+client@gmail.com:Client123
+```
+
+<h2>Endpoints</h2>
+
+```
+http://localhost:3000
+http://localhost:3000/api-docs/
+http://localhost:4200
 ```
 
 ---

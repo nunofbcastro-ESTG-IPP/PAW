@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  frontoffice:
+    image: ${DOCKER_REGISTRY-}frontoffice
+    build:
+      context: .
+      dockerfile: Dockerfile
+    entrypoint: .docker/entrypoint.sh
+    ports:
+      - '4200:4200'
+    volumes:
+      - .:/appFrontOffice

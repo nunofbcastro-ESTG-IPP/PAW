@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  mongodb:
+    extends:
+      file: ./Database/docker-compose.yml
+      service: mongodb
+  backoffice:
+    extends:
+      file: ./BackOffice/docker-compose.yml
+      service: backoffice
+    depends_on:
+      - mongodb
+  frontoffice:
+    extends:
+      file: ./FrontOffice/docker-compose.yml
+      service: frontoffice
+    depends_on:
+      - backoffice

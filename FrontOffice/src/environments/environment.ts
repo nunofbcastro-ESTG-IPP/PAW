@@ -4,11 +4,11 @@
 
 export const environment = {
   production: false,
-  api: 'http://localhost:3000/api/v1/',
-  imageBook: 'http://localhost:3000/images/books/',
-  imageUser: 'http://localhost:3000/images/user/',
-  imageSales: 'http://localhost:3000/images/sales/',
-  stripe_pk: PublicKey,
+  api: 'http://host.docker.internal:3000/api/v1/',
+  imageBook: 'http://host.docker.internal:3000/images/books/',
+  imageUser: 'http://host.docker.internal:3000/images/user/',
+  imageSales: 'http://host.docker.internal:3000/images/sales/',
+  stripe_pk: 'PublicKey',
   imageNotFound: './assets/images/image-not-found.webp',
   imageNotFoundUser: './assets/images/default-user-image.png',
 };
