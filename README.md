@@ -60,6 +60,7 @@ connection succesful
 <h2>Users already created</h2>
 
 ```
+email:password
 admin@gmail.com:Admin123
 employee@gmail.com:Employee123
 client@gmail.com:Client123
