@@ -12,3 +12,4 @@ services:
       - 27018:27017
     volumes:
       - ./data/db:/data/db
+      - ./backup:/backup

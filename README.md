@@ -57,6 +57,13 @@ connection succesful
 
 ---
 
+<h2>How to restore database</h2>
+
+cd Database
+mongorestore --host localhost:27018 --username root --password rootpassword --authenticationDatabase admin --db paw backup/paw
+
+---
+
 <h2>Users already created</h2>
 
 ```
