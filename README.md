@@ -1,13 +1,13 @@
 <h1 align="center">Practical Work on Programação em Ambiente Web (Programming in Web Environment)</h1>
 
 <p>
-  <img src="http://img.shields.io/static/v1?label=School%20year&message=2021/2022&color=GREEN"/>
-  <img src="http://img.shields.io/static/v1?label=Discipline&message=PAW&color=GREEN"/>
+  <img src="http://img.shields.io/static/v1?style=for-the-badge&label=School%20year&message=2021/2022&color=sucess"/>
+  <img src="http://img.shields.io/static/v1?style=for-the-badge&label=Discipline&message=PAW&color=sucess"/>
   <a href="https://github.com/nunofbcastro-ESTG-IPP/PAW/blob/main/Doc/2022.PAW.TP_AC_V1.pdf" target="_blank">
-    <img src="https://img.shields.io/badge/-Utterance-grey"/>
+    <img src="https://img.shields.io/badge/-Utterance-grey?style=for-the-badge"/>
   </a>
   <a href="https://github.com/nunofbcastro-ESTG-IPP/PAW/blob/main/Doc/Relatorio_PAW_TP_Grupo9.pdf" target="_blank">
-    <img src="https://img.shields.io/badge/-Report-grey"/>
+    <img src="https://img.shields.io/badge/-Report-grey?style=for-the-badge"/>
   </a>
 </p>
 
