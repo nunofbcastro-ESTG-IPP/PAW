@@ -108,6 +108,6 @@ http://localhost:4200
 <h3>
   Bruno Ferreira
   <a href="https://github.com/brunoferreira0106?tab=followers">
-    <img src="https://img.shields.io/github/followers/BrunoFerreira02.svg?style=social&label=Follow" />
+    <img src="https://img.shields.io/github/followers/brunoferreira0106.svg?style=social&label=Follow" />
   </a>
 </h3>
