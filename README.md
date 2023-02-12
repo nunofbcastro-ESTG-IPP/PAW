@@ -1,8 +1,11 @@
 <h1 align="center">Practical Work on Programação em Ambiente Web (Programming in Web Environment)</h1>
 
+<img src="https://github.com/nunofbcastro-ESTG-IPP/PAW_2021_2022/blob/main/images/Page.png?raw=true"/>
+
 <p>
   <img src="http://img.shields.io/static/v1?style=for-the-badge&label=School%20year&message=2021/2022&color=sucess"/>
   <img src="http://img.shields.io/static/v1?style=for-the-badge&label=Discipline&message=PAW&color=sucess"/>
+  <img src="http://img.shields.io/static/v1?style=for-the-badge&label=Grade&message=19&color=sucess"/>
   <a href="https://github.com/nunofbcastro-ESTG-IPP/PAW/blob/main/Doc/2022.PAW.TP_AC_V1.pdf" target="_blank">
     <img src="https://img.shields.io/badge/-Utterance-grey?style=for-the-badge"/>
   </a>
@@ -101,13 +104,13 @@ http://localhost:4200
 <h3>
   Nuno Castro
   <a href="https://github.com/nunofbcastro?tab=followers">
-    <img src="https://img.shields.io/github/followers/nunofbcastro.svg?style=social&label=Follow" />
+    <img src="https://img.shields.io/github/followers/nunofbcastro.svg?style=for-the-badge&label=Follow" height="20"/>
   </a>
 </h3>
 
 <h3>
   Bruno Ferreira
   <a href="https://github.com/brunoferreira0106?tab=followers">
-    <img src="https://img.shields.io/github/followers/brunoferreira0106.svg?style=social&label=Follow" />
+    <img src="https://img.shields.io/github/followers/brunoferreira0106.svg?style=for-the-badge&label=Follow" height="20"/>
   </a>
 </h3>
